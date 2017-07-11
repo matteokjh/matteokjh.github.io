@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://github.com/matteokjh/matteokjh.github.io/2017/07/11/0x01/index.html">
 <meta property="og:site_name" content="Caster">
 <meta property="og:description" content="Summer Training Day 2.">
-<meta property="og:updated_time" content="2017-07-10T16:51:30.741Z">
+<meta property="og:updated_time" content="2017-07-11T12:56:36.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x01">
 <meta name="twitter:description" content="Summer Training Day 2.">
@@ -321,8 +321,20 @@
       
 
       
-        <p>Summer Training Day 2.</p>
-
+        <p>Summer Training Day 2.<br><a id="more"></a></p>
+<h1 id="1-DOM与BOM"><a href="#1-DOM与BOM" class="headerlink" title="1.DOM与BOM."></a>1.DOM与BOM.</h1><p>ECMAScript（核心）：JavaScript 语言基础；<br>DOM(Document Object Model)文档对象类型：规定了访问HTML和XML的接口；<br>BOM（Browser Object Mode）浏览器对象模型：提供了独立于内容而在浏览器窗口之间进行交互的对象和方法。</p>
+<h3 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h3><p>不属于任何浏览器;<br>定义了 JavaScript 脚本中最为核心的内容;<br>是 JavaScript 脚本的“骨架”;<br>最新版本是 ES7;</p>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>DOM 定义了 JavaScript 操作 HTML 文档的接口;<br>提供了访问HTML文档的途径以及操作方法;<br>DOM操作html树，包括节点和节点之间的关系；<br>对节点：增删改查；<br>对关系：父子，非父子；<br>child,parent,siblings;<br>获取节点方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">document.getElementById(<span class="string">""</span>);</div><div class="line">document.getElementsByClassName(<span class="string">""</span>);</div><div class="line">document.getElementsByTagName(<span class="string">""</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="CSS选择器复习"><a href="#CSS选择器复习" class="headerlink" title="CSS选择器复习"></a>CSS选择器复习</h3><p>优先级排列：内联样式，id，class，tag；</p>
+<p>#2.JavaScript的事件机制.</p>
+<h3 id="事件冒泡—IE事件流"><a href="#事件冒泡—IE事件流" class="headerlink" title="事件冒泡—IE事件流"></a>事件冒泡—IE事件流</h3><p>开始由最具体的元素接收，然后逐渐传播到不那么具体的节点;<br>div→body→html→document；</p>
+<h3 id="事件捕获—Netscape"><a href="#事件捕获—Netscape" class="headerlink" title="事件捕获—Netscape"></a>事件捕获—Netscape</h3><p>完全相反.</p>
+<h3 id="DOM标准事件模型"><a href="#DOM标准事件模型" class="headerlink" title="DOM标准事件模型"></a>DOM标准事件模型</h3><p>1.事件捕获阶段;<br>2.处于目标阶段;<br>3.事件冒泡阶段;<br>*需要注意的是，1阶段不到body，body被看作是3阶段一部分;</p>
+<h3 id="处理事件的两种方法"><a href="#处理事件的两种方法" class="headerlink" title="处理事件的两种方法"></a>处理事件的两种方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">addEventlistener(event,fn,boolean);</div><div class="line">removeEventListener(event,fn,boolean);</div></pre></td></tr></table></figure>
+<p>IE事件处理：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">attachEvent(event,fn);</div><div class="line">detachEvent(event,fn);</div></pre></td></tr></table></figure></p>
+<p>*跨浏览器的事件处理：以后再议;</p>
+<h1 id="2-IFE-Task"><a href="#2-IFE-Task" class="headerlink" title="2.IFE Task"></a>2.IFE Task</h1><h3 id="2-1"><a href="#2-1" class="headerlink" title="2-1"></a>2-1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">button[0].addEventListener(<span class="string">'click'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    display.innerHTML = input.value;</div><div class="line">&#125;)</div><div class="line"><span class="comment">#.value 加在值变化之后，不能作用于空值.</span></div></pre></td></tr></table></figure>
+<h3 id="2-2"><a href="#2-2" class="headerlink" title="2-2"></a>2-2</h3>
       
     </div>
 
@@ -413,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -487,6 +508,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-DOM与BOM"><span class="nav-number">1.</span> <span class="nav-text">1.DOM与BOM.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAScript"><span class="nav-number">1.0.1.</span> <span class="nav-text">ECMAScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.0.2.</span> <span class="nav-text">DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS选择器复习"><span class="nav-number">1.0.3.</span> <span class="nav-text">CSS选择器复习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件冒泡—IE事件流"><span class="nav-number">1.0.4.</span> <span class="nav-text">事件冒泡—IE事件流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件捕获—Netscape"><span class="nav-number">1.0.5.</span> <span class="nav-text">事件捕获—Netscape</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM标准事件模型"><span class="nav-number">1.0.6.</span> <span class="nav-text">DOM标准事件模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理事件的两种方法"><span class="nav-number">1.0.7.</span> <span class="nav-text">处理事件的两种方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-IFE-Task"><span class="nav-number">2.</span> <span class="nav-text">2.IFE Task</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">2-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2"><span class="nav-number">2.0.2.</span> <span class="nav-text">2-2</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
