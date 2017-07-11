@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="Summer Training Day 1.">
+<meta name="description" content="Summer Training Day 1. 基本命令行操作（git bash）git基本操作Hexo个人博客搭建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0x00">
 <meta property="og:url" content="https://github.com/matteokjh/matteokjh.github.io/2017/07/11/0x00/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 1.">
-<meta property="og:updated_time" content="2017-07-10T16:20:34.647Z">
+<meta property="og:description" content="Summer Training Day 1. 基本命令行操作（git bash）git基本操作Hexo个人博客搭建">
+<meta property="og:updated_time" content="2017-07-11T06:37:54.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x00">
-<meta name="twitter:description" content="Summer Training Day 1.">
+<meta name="twitter:description" content="Summer Training Day 1. 基本命令行操作（git bash）git基本操作Hexo个人博客搭建">
 
 
 
@@ -322,6 +322,23 @@
 
       
         <p>Summer Training Day 1.</p>
+<p>基本命令行操作（git bash）<br>git基本操作<br>Hexo个人博客搭建</p>
+<a id="more"></a>
+<h1 id="基本命令行操作（git-bash）"><a href="#基本命令行操作（git-bash）" class="headerlink" title="基本命令行操作（git bash）"></a>基本命令行操作（git bash）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span>(change directory)           : <span class="built_in">cd</span> + 路径</div><div class="line">cat（查看文件）                 : cat + 文件名</div><div class="line">ls(list files)                 : ls -a(all)，ls -al</div><div class="line"><span class="built_in">pwd</span>（<span class="built_in">print</span> working directory） <span class="comment"># 显示当前目录</span></div><div class="line">mkdir（make directory)         : mkdir + 目录名</div><div class="line"><span class="built_in">echo</span>                           : <span class="built_in">echo</span> <span class="string">"内容"</span> &gt;&gt; 文件名    <span class="comment"># 写入</span></div><div class="line">mv(move)                       : mv <span class="string">"文件名"</span>  路径        <span class="comment"># 移动文件</span></div><div class="line">rm(remove)                     : rm <span class="string">"文件名"</span>              <span class="comment"># 删除文件</span></div><div class="line">cp(copy)                       : cp <span class="string">"文件名"</span> 路径         <span class="comment"># 复制文件</span></div><div class="line">vim                            <span class="comment"># 打开vim文本编辑器</span></div></pre></td></tr></table></figure>
+<p>.</p>
+<h1 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> + 仓库地址</div><div class="line">git add   + 文件名</div><div class="line">git status</div><div class="line">git reset</div><div class="line">git commit -m <span class="string">""</span>  <span class="comment"># 一定要有</span></div><div class="line">git <span class="built_in">log</span>           <span class="comment"># 查看commit信息</span></div><div class="line">git push origin master</div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
+<p>.</p>
+<h1 id="Hexo个人博客搭建"><a href="#Hexo个人博客搭建" class="headerlink" title="Hexo个人博客搭建"></a>Hexo个人博客搭建</h1><h3 id="a-Prepare"><a href="#a-Prepare" class="headerlink" title="a) Prepare"></a>a) Prepare</h3><p>1.Download Node.js;<br>2.Download Git;<br>3.Use your id to make respository e.g. : matteokjh.github.io;<br>4.Setting Github Pages as master branch;<br>5.SSH Key:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"e-mail"</span></div></pre></td></tr></table></figure></p>
+<p>open <strong>id_rsa.pub</strong> and copy to<br><a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a></p>
+<p>remember don’t copy ‘enter’<br>title is not important.</p>
+<h3 id="b-Hexo"><a href="#b-Hexo" class="headerlink" title="b) Hexo"></a>b) Hexo</h3><p>1.Install Hexo.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli </div><div class="line">$ hexo</div><div class="line"><span class="comment">#test</span></div></pre></td></tr></table></figure></p>
+<p>2.Setting.<br>open /blog/_config.yml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: Caster</div><div class="line">subtitle: blogging is the new sexy</div><div class="line">description: Valar Morghulis</div><div class="line">author: Caster K.</div><div class="line">language: zh-Hans</div><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url:https://matteokjh.github.io</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: https://github.com/matteokjh.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>3.edit.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</div><div class="line">$ hexo new <span class="string">"title"</span></div></pre></td></tr></table></figure></p>
+<p>write sth. in  /source/post/title.md</p>
+<p>4.Release.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div><div class="line"><span class="comment">#check on localhost:4000/</span></div><div class="line">$ hexo g</div><div class="line"><span class="comment">#generate</span></div><div class="line"><span class="comment">#if you cannot hexo d,type this.</span></div><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo d </div><div class="line"><span class="comment">#deploy</span></div></pre></td></tr></table></figure></p>
+<p>Done.</p>
 
       
     </div>
@@ -417,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -462,6 +488,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本命令行操作（git-bash）"><span class="nav-number">1.</span> <span class="nav-text">基本命令行操作（git bash）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git基本操作"><span class="nav-number">2.</span> <span class="nav-text">git基本操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo个人博客搭建"><span class="nav-number">3.</span> <span class="nav-text">Hexo个人博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-Prepare"><span class="nav-number">3.0.1.</span> <span class="nav-text">a) Prepare</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-Hexo"><span class="nav-number">3.0.2.</span> <span class="nav-text">b) Hexo</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
