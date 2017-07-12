@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://github.com/matteokjh/matteokjh.github.io/2017/07/12/0x02/index.html">
 <meta property="og:site_name" content="Caster">
 <meta property="og:description" content="Summer Training Day 3.">
-<meta property="og:updated_time" content="2017-07-12T05:33:04.613Z">
+<meta property="og:updated_time" content="2017-07-12T14:24:11.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x02">
 <meta name="twitter:description" content="Summer Training Day 3.">
@@ -322,7 +322,15 @@
 
       
         <p>Summer Training Day 3.<br><a id="more"></a></p>
-<h1 id="1-Canvas"><a href="#1-Canvas" class="headerlink" title="1.Canvas."></a>1.Canvas.</h1><p>background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);</p>
+<h1 id="1-Canvas"><a href="#1-Canvas" class="headerlink" title="1.Canvas."></a>1.Canvas.</h1><p>在html创建canvas标签<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width:</span>"<span class="attr">600</span>";<span class="attr">height:</span>"<span class="attr">600</span>"; <span class="attr">id</span>=<span class="string">"canvas"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>js操作.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);<span class="comment">//获取canvas.</span></div><div class="line"><span class="keyword">var</span> cxt = canvas.getContext(<span class="string">"2d"</span>);<span class="comment">//上下文.里面有很多绘画方法.</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cxt.fillStyle = <span class="string">'rgba'</span>;</div><div class="line">cxt.strokeStyle = <span class="string">'rgba'</span>;</div><div class="line">cxt.fillRect(x,y,width,height);<span class="comment">//填充，以像素计.</span></div><div class="line">cxt.strokeRect(x,y,width,height);<span class="comment">//描边</span></div></pre></td></tr></table></figure>
+<p>画圆.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cxt.beginPath();</div><div class="line">cxt.arc(x,y,r,始角度，末角度，boolean);<span class="comment">//true为顺时针,false逆时针.</span></div><div class="line">cxt.closePath();</div><div class="line">cxt.fillStyle = <span class="string">'rgba'</span>;</div><div class="line">cxt.fill();<span class="comment">//填充</span></div></pre></td></tr></table></figure></p>
+<p>线条.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cxt.beginPath();</div><div class="line">cxt.moveTo(x,y);</div><div class="line">cxt.lineTo(x,y);</div><div class="line">cxt.closePath();</div><div class="line">cxt.stroke();</div></pre></td></tr></table></figure></p>
+<p>清除.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cxt.clearRect(x,y,width,height);<span class="comment">//清空矩形区域.</span></div></pre></td></tr></table></figure></p>
+<h1 id="2-Flex-布局"><a href="#2-Flex-布局" class="headerlink" title="2.Flex 布局"></a>2.Flex 布局</h1><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="external">阮一峰的日志</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">    display: flex;</div><div class="line">    flex-direction: row | row-reverse | column | column-reverse;</div><div class="line">    flex-wrap: nowrap | wrap | wrap-reverse;</div><div class="line">    flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;/*前两者之和*/</div><div class="line">    justify-content: flex-start | flex-end | center | space-between | space-around;</div><div class="line">    align-items: flex-start | flex-end | center | baseline | stretch;</div><div class="line">    align-content/*多根轴线，若只有一则不起作用*/；</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="H5新特性之LocalStorge"><a href="#H5新特性之LocalStorge" class="headerlink" title="H5新特性之LocalStorge."></a>H5新特性之LocalStorge.</h1><p>可用于储存客户端临时信息.<br>localStorge储存的数据无时间限制.<br>与之对应的SessionStorge储存的数据当用户关闭窗口时候清空.</p>
 
       
     </div>
@@ -507,7 +515,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Canvas"><span class="nav-number">1.</span> <span class="nav-text">1.Canvas.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Canvas"><span class="nav-number">1.</span> <span class="nav-text">1.Canvas.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Flex-布局"><span class="nav-number">2.</span> <span class="nav-text">2.Flex 布局</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H5新特性之LocalStorge"><span class="nav-number">3.</span> <span class="nav-text">H5新特性之LocalStorge.</span></a></li></ol></div>
             
 
           </div>
