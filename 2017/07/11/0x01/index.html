@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="Summer Training Day 2.DOM与BOM.JavaScript的事件机制.IFE Task 2-1 2-2">
+<meta name="description" content="Summer Training Day 2. DOM与BOM.JavaScript的事件机制.IFE Task 2-1 2-2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0x01">
 <meta property="og:url" content="https://github.com/matteokjh/matteokjh.github.io/2017/07/11/0x01/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 2.DOM与BOM.JavaScript的事件机制.IFE Task 2-1 2-2">
-<meta property="og:updated_time" content="2017-07-12T02:25:45.523Z">
+<meta property="og:description" content="Summer Training Day 2. DOM与BOM.JavaScript的事件机制.IFE Task 2-1 2-2">
+<meta property="og:updated_time" content="2017-07-14T14:08:37.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x01">
-<meta name="twitter:description" content="Summer Training Day 2.DOM与BOM.JavaScript的事件机制.IFE Task 2-1 2-2">
+<meta name="twitter:description" content="Summer Training Day 2. DOM与BOM.JavaScript的事件机制.IFE Task 2-1 2-2">
 
 
 
@@ -321,7 +321,8 @@
       
 
       
-        <p>Summer Training Day 2.<br>DOM与BOM.<br>JavaScript的事件机制.<br>IFE Task 2-1 2-2<br><a id="more"></a></p>
+        <p>Summer Training Day 2.</p>
+<p>DOM与BOM.<br>JavaScript的事件机制.<br>IFE Task 2-1 2-2<br><a id="more"></a></p>
 <h1 id="1-DOM与BOM"><a href="#1-DOM与BOM" class="headerlink" title="1.DOM与BOM."></a>1.DOM与BOM.</h1><p>ECMAScript（核心）：JavaScript 语言基础；<br>DOM(Document Object Model)文档对象类型：规定了访问HTML和XML的接口；<br>BOM（Browser Object Mode）浏览器对象模型：提供了独立于内容而在浏览器窗口之间进行交互的对象和方法。</p>
 <h3 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h3><p>不属于任何浏览器;<br>定义了 JavaScript 脚本中最为核心的内容;<br>是 JavaScript 脚本的“骨架”;<br>最新版本是 ES7;</p>
 <h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><p>定义了 JavaScript 操作浏览器的接口;<br>提供了访问某些功能（如浏览器窗口大小、版本信息、浏览历史记录等）的途径以及操作方法;</p>
@@ -338,6 +339,8 @@
 <p>oninput: 作用于input标签或textarea标签，实时调用js函数;<br>格式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input oninput= <span class="string">"myFunction()"</span>&gt;&lt;/input&gt;</div></pre></td></tr></table></figure></p>
 <h3 id="2-2"><a href="#2-2" class="headerlink" title="2-2"></a>2-2</h3><p>新操作.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">newData.sort(<span class="keyword">function</span> (a, b) &#123;</div><div class="line">        <span class="built_in">return</span> b[1] - a[1];</div><div class="line">    &#125;);</div><div class="line">    <span class="comment"># sort</span></div><div class="line">    <span class="comment"># 基本形式是</span></div><div class="line">    <span class="comment"># object.sort(function(a,b)&#123;</span></div><div class="line">    <span class="comment">#     return a-b;</span></div><div class="line">    <span class="comment"># &#125;)</span></div><div class="line">    <span class="comment"># 其中a-b：从小到大排序；b-a：从大到小；</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var number = [<span class="string">"一"</span>,<span class="string">"二"</span>,<span class="string">"三"</span>,<span class="string">"四"</span>];</div><div class="line">    <span class="keyword">for</span> (var i = 0; i &lt; newData.length; i++) &#123;</div><div class="line">        var li = document.createElement(<span class="string">"li"</span>);</div><div class="line">        var ul = document.getElementById(<span class="string">"aqi-list"</span>);</div><div class="line">        ul.appendChild(li);</div><div class="line">        li.innerHTML = <span class="string">"第"</span> + number[i] + <span class="string">"名"</span> + <span class="string">":"</span> + newData[i][0] + <span class="string">","</span> + newData[i][1];</div><div class="line">        console.log(newData[i]);</div><div class="line">        <span class="comment">#&lt;li&gt;第一名：福州（样例），10&lt;/li&gt;</span></div><div class="line">        <span class="comment">#&lt;li&gt;第二名：福州（样例），10&lt;/li&gt;</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>以上.</p>
+
       
     </div>
 
@@ -457,7 +460,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
