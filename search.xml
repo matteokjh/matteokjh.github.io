@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[0x06]]></title>
     <url>%2F2017%2F07%2F16%2F0x06%2F</url>
-    <content type="text"><![CDATA[Summer Training Day 7今日休息.[无内容] 骗你的. 今日杂谈. 今天闲得蛋疼就优化了一下我的blog,添加一些功能. 不蒜子访问统计LocalSearch搜索#友言评论系统]]></content>
+    <content type="text"><![CDATA[Summer Training Day 7今日休息.[无内容] 骗你的.今天闲得蛋疼就优化了一下我的blog,添加一些功能. 不蒜子访问统计不蒜子统计 如图为主题配置文件,uv为网站访问人数，pv为访问总量，page_pv为文章阅读量但是由于前二者统计数量有误：一辈子都不可能有这么多访问量..估计是busuanzi的问题(也可能是next调用busuanzi的相关问题。于是乎关了这两个只留文章阅读量(应该是点击量，因为刷新次数会上升) LocalSearch搜索官方文档已经说的很明白了，如果按教程走不行，试一下重新hexo s，hexo clean再hexo g. 友言评论系统参考教程：为next添加友言评论支持其实next自己就配置好了友言相关，所以只需要改主题配置文件的UID就好. p.s.今天插入了许多本地图片，也是我第一次插入本地图片(之前的为在线引用)，正确的写法应该为1![](/img/图片.jpg), 其中第一个斜杠不能少，其前面不能加 “ . ” , 当然 “ .. ” 也不行，绝对路径也不行，具体原因尚不知.img文件夹在source下与_post并列(但是不需要加’..’). 以上.]]></content>
   </entry>
   <entry>
     <title><![CDATA[0x05]]></title>
