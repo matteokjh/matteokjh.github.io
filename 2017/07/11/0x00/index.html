@@ -368,7 +368,7 @@
 <h1 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> + 仓库地址</div><div class="line">git add   + 文件名</div><div class="line">git status</div><div class="line">git reset</div><div class="line">git commit -m <span class="string">""</span>  <span class="comment"># 一定要有</span></div><div class="line">git <span class="built_in">log</span>           <span class="comment"># 查看commit信息</span></div><div class="line">git push origin master</div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
 <p>.</p>
 <h1 id="Hexo个人博客搭建"><a href="#Hexo个人博客搭建" class="headerlink" title="Hexo个人博客搭建"></a>Hexo个人博客搭建</h1><h3 id="a-Prepare"><a href="#a-Prepare" class="headerlink" title="a) Prepare"></a>a) Prepare</h3><p>1.Download Node.js;<br>2.Download Git;<br>3.Use your id to make respository e.g. : matteokjh.github.io;<br>4.Setting Github Pages as master branch;<br>5.SSH Key:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"e-mail"</span></div></pre></td></tr></table></figure></p>
-<p>open <strong>id_rsa.pub</strong> and copy to<br><a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a></p>
+<p>open <strong>id_rsa.pub</strong> and copy to<br><a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a></p>
 <p>remember don’t copy ‘enter’<br>title is not important.</p>
 <h3 id="b-Hexo"><a href="#b-Hexo" class="headerlink" title="b) Hexo"></a>b) Hexo</h3><p>1.Install Hexo.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli </div><div class="line">$ hexo</div><div class="line"><span class="comment">#test</span></div></pre></td></tr></table></figure></p>
 <p>2.Setting.<br>open /blog/_config.yml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: Caster</div><div class="line">subtitle: blogging is the new sexy</div><div class="line">description: Valar Morghulis</div><div class="line">author: Caster K.</div><div class="line">language: zh-Hans</div><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure></p>
@@ -452,6 +452,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="uyan_frame"></div>
+    
   </div>
 
 
@@ -498,7 +500,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -731,6 +733,14 @@
 
 
 
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2139155"></script>
+      <!-- UY END -->
+    
   
 
 
