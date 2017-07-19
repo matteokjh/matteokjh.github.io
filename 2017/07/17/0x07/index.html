@@ -87,17 +87,18 @@
 
 
 
-<meta name="description" content="Summer Training Day 8.">
+<meta name="description" content="Summer Training Day 8. IFE Task 15异步，作用域与闭包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0x07">
 <meta property="og:url" content="https://matteokjh.github.io/2017/07/17/0x07/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 8.">
+<meta property="og:description" content="Summer Training Day 8. IFE Task 15异步，作用域与闭包">
 <meta property="og:image" content="https://matteokjh.github.io/img/innertext.png">
-<meta property="og:updated_time" content="2017-07-18T06:13:26.358Z">
+<meta property="og:image" content="https://matteokjh.github.io/img/scope.png">
+<meta property="og:updated_time" content="2017-07-19T05:42:41.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x07">
-<meta name="twitter:description" content="Summer Training Day 8.">
+<meta name="twitter:description" content="Summer Training Day 8. IFE Task 15异步，作用域与闭包">
 <meta name="twitter:image" content="https://matteokjh.github.io/img/innertext.png">
 
 
@@ -362,7 +363,8 @@
       
 
       
-        <p>Summer Training Day 8.<br><a id="more"></a><br>第二周的第一天.</p>
+        <p>Summer Training Day 8.</p>
+<p>IFE Task 15<br>异步，作用域与闭包<br><a id="more"></a><br>第二周的第一天.</p>
 <hr>
 
 <h1 id="IFE-Task"><a href="#IFE-Task" class="headerlink" title="IFE Task."></a>IFE Task.</h1><hr>
@@ -372,10 +374,15 @@
 <p>最后加一句防止按钮重复点击：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(resort.innerText == <span class="string">""</span>)</div></pre></td></tr></table></figure></p>
 <hr>
 
-<h1 id="异步、作用域与闭包"><a href="#异步、作用域与闭包" class="headerlink" title="异步、作用域与闭包"></a>异步、作用域与闭包</h1><p><br><br>攻略↓<br><a href="https://zhuanlan.zhihu.com/p/25407758" target="_blank" rel="external">Excuse me？这个前端88面试在搞事！</a><br><br></p>
+<h1 id="异步、作用域与闭包"><a href="#异步、作用域与闭包" class="headerlink" title="异步、作用域与闭包."></a>异步、作用域与闭包.</h1><p><br></p>
 <h3 id="执行环境与作用域"><a href="#执行环境与作用域" class="headerlink" title="执行环境与作用域"></a>执行环境与作用域</h3><p>1.<strong>执行环境</strong>(execution context,简称环境)，每个环境都有与之对应的一个变量对象(variable object)，包含在环境中定义的所有变量和函数。全局执行环境，是最外围的执行环境，在Web中被认为是windows对象。某个执行环境中的代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁，但在全局执行环境的直到应用程序退出才会被销毁。<br>2.每个函数都有自己的执行环境，当执行流进入一个函数，函数的环境会被推入一个<strong>环境栈</strong>中，执行完之后栈将其环境弹出，把控制权交还给之前的执行环境。<br>3.当代码在一个环境中执行时，会创建变量对象的一个<strong>作用域链</strong>(scope chain)。其前端始终是当前执行的代码所在环境的变量对象。如果是函数，则其<strong>活动对象</strong>(activation object)为变量对象。活动对象最开始时只包含argument对象(此对象在全局是不存在的)，全局执行环境的变量始终是作用域链的最后一个对象。<br>(摘自JavaScript高级程序设计)<br><br></p>
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>定义：<strong>闭包</strong>是指有权访问另一个函数作用域中的变量的函数。<br>在函数内部创建另一个函数就是一种创建闭包。</p>
-
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>定义：<strong>闭包</strong>是指有权访问另一个函数作用域中的变量的函数。<br>在函数内部创建另一个函数就是一种创建闭包。<br><br>攻略↓<br><a href="https://zhuanlan.zhihu.com/p/25407758" target="_blank" rel="external">Excuse me？这个前端88面试在搞事！</a><br><a href="http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html" target="_blank" rel="external">汤姆大叔的博客:”深入理解JavaScript系列（16）：闭包（Closures）”</a><br><br><img src="/img/scope.png" alt=""><br>所以，不只是setTimeout的问题.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;, <span class="number">1000</span> * i);</div><div class="line">&#125; <span class="comment">//输出5个5</span></div></pre></td></tr></table></figure>
+<p>与</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = [];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k = <span class="number">0</span>; k &lt; <span class="number">3</span>; k++) &#123;</div><div class="line">  data[k] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    alert(k);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">data[<span class="number">0</span>](); <span class="comment">// 3, 而不是0</span></div><div class="line">data[<span class="number">1</span>](); <span class="comment">// 3, 而不是1</span></div><div class="line">data[<span class="number">2</span>](); <span class="comment">// 3, 而不是2</span></div><div class="line"><span class="comment">//上下文共用一个[[scope]]属性，故k改变</span></div></pre></td></tr></table></figure>
+<p>解决方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(i);</div><div class="line">    &#125;, i * <span class="number">1000</span>);</div><div class="line">  &#125;)(i);</div><div class="line">&#125;<span class="comment">//在匿名函数外部加闭包</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//也可以在匿名函数内部return里边加闭包</span></div><div class="line"><span class="comment">//@汤姆大叔 版本</span></div><div class="line"><span class="keyword">var</span> data = [];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k = <span class="number">0</span>; k &lt; <span class="number">3</span>; k++) &#123;</div><div class="line">  data[k] = (<span class="function"><span class="keyword">function</span> <span class="title">_helper</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      alert(x);</div><div class="line">    &#125;;</div><div class="line">  &#125;)(k); <span class="comment">// 传入"k"值</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 现在结果是正确的了</span></div><div class="line">data[<span class="number">0</span>](); <span class="comment">// 0</span></div><div class="line">data[<span class="number">1</span>](); <span class="comment">// 1</span></div><div class="line">data[<span class="number">2</span>](); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<hr>
       
     </div>
 
@@ -565,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IFE-Task"><span class="nav-number">1.</span> <span class="nav-text">IFE Task.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-15"><span class="nav-number">1.0.1.</span> <span class="nav-text">Task 15.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步、作用域与闭包"><span class="nav-number">2.</span> <span class="nav-text">异步、作用域与闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境与作用域"><span class="nav-number">2.0.1.</span> <span class="nav-text">执行环境与作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">2.0.2.</span> <span class="nav-text">闭包</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IFE-Task"><span class="nav-number">1.</span> <span class="nav-text">IFE Task.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-15"><span class="nav-number">1.0.1.</span> <span class="nav-text">Task 15.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步、作用域与闭包"><span class="nav-number">2.</span> <span class="nav-text">异步、作用域与闭包.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境与作用域"><span class="nav-number">2.0.1.</span> <span class="nav-text">执行环境与作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">2.0.2.</span> <span class="nav-text">闭包</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
