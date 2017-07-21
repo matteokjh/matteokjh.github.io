@@ -87,20 +87,16 @@
 
 
 
-<meta name="description" content="Summer Training Day 11. 画钟this">
+<meta name="description" content="Summer Training Day 11. apply&amp;amp;call&amp;amp;bind.json">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0x0A">
-<meta property="og:url" content="https://matteokjh.github.io/2017/07/21/0x0A/index.html">
+<meta property="og:title" content="b">
+<meta property="og:url" content="https://matteokjh.github.io/2017/07/21/0x0B/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 11. 画钟this">
-<meta property="og:image" content="https://matteokjh.github.io/img/clock.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/clock1.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/clock2.png">
-<meta property="og:updated_time" content="2017-07-21T12:41:28.629Z">
+<meta property="og:description" content="Summer Training Day 11. apply&amp;amp;call&amp;amp;bind.json">
+<meta property="og:updated_time" content="2017-07-21T13:11:18.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x0A">
-<meta name="twitter:description" content="Summer Training Day 11. 画钟this">
-<meta name="twitter:image" content="https://matteokjh.github.io/img/clock.png">
+<meta name="twitter:title" content="b">
+<meta name="twitter:description" content="Summer Training Day 11. apply&amp;amp;call&amp;amp;bind.json">
 
 
 
@@ -128,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://matteokjh.github.io/2017/07/21/0x0A/"/>
+  <link rel="canonical" href="https://matteokjh.github.io/2017/07/21/0x0B/"/>
 
 
 
 
 
-  <title> 0x0A | Caster </title>
+  <title> b | Caster </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/21/0x0A/">
+    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/21/0x0B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caster.K">
@@ -308,7 +304,7 @@
             
             
               
-                0x0A
+                b
               
             
           </h1>
@@ -323,7 +319,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T12:49:28+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T19:58:06+08:00">
                 2017-07-21
               </time>
             
@@ -365,22 +361,30 @@
 
       
         <p>Summer Training Day 11.</p>
-<p>画钟<br>this<br><a id="more"></a></p>
+<p>apply&amp;call&amp;bind.<br>json<br><a id="more"></a></p>
 <hr>
 
-<h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p><img src="/img/clock.png" alt=""><br>ummmmm..<br>没什么可说的，css设置好html,body，canvas位置关系之后，剩下的就是js.<br>先画底圆，然后刻度，然后秒分时针，最后中间点.计时器setIinterval(function,1000);<br>1秒一次，内部先clear再draw.一开始先draw一次让网页刷新就有东西.<br>具体实现利用了许多数学的东西,简单但麻烦.<br><img src="/img/clock1.png" alt=""><br><img src="/img/clock2.png" alt=""><br>强烈推荐<a href="http://colorhunt.co/" target="_blank" rel="external">colorhunt配色网站</a><br>以及<a href="https://webgradients.com/" target="_blank" rel="external">Webgradients渐变色网站</a></p>
+<h1 id="call-amp-apply-amp-bind"><a href="#call-amp-apply-amp-bind" class="headerlink" title="call&amp;apply&amp;bind"></a>call&amp;apply&amp;bind</h1><p><br></p>
+<h4 id="apply"><a href="#apply" class="headerlink" title="apply()"></a>apply()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　alert(<span class="keyword">this</span>.x);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> o=&#123;&#125;;</div><div class="line">o.x = <span class="number">1</span>;</div><div class="line">o.m = test;</div><div class="line">o.m.apply(); <span class="comment">//0</span></div></pre></td></tr></table></figure>
+<h4 id="apply-和call"><a href="#apply-和call" class="headerlink" title="apply()和call()"></a>apply()和call()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>.<span class="title">apply</span>(<span class="params">thisArg, [argsArray]</span>)</span></div><div class="line"><span class="title">thisArg</span> //传入<span class="title">function</span>内<span class="title">this</span>的值(<span class="params">可以改变this指向thisArg</span>)</div></pre></td></tr></table></figure>
+<p>“<br>thisArg<br>在 fun 函数运行时指定的 this 值。需要注意的是，指定的 this 值并不一定是该函数执行时真正的 this 值，如果这个函数处于非严格模式下，则指定为 null 或 undefined 时会自动指向全局对象（浏览器中就是window对象），同时值为原始值（数字，字符串，布尔值）的 this 会指向该原始值的自动包装对象。<br>argsArray<br>一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 fun 函数。如果该参数的值为null 或 undefined，则表示不需要传入任何参数。”<br>以上为MDN的解释.其实就是改变this指向，从原来的改为指向thisArg.<br>call和apply类似，不同点在于call第二项需要直接传递给函数，即一项一项写出来，apply可以以一个数组形式写出来.</p>
+<h4 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h4><p>bind会创建一个函数的实例，this值会绑定到传给bind()函数的值.本质上同apply&amp;call但是需要赋给变量.</p>
 <hr>
 
-<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>this的四种用法：</p>
-<h3 id="直接调用"><a href="#直接调用" class="headerlink" title="直接调用."></a>直接调用.</h3><p>this指向全局对象.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">　<span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line">　<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　consloe.log(<span class="keyword">this</span>.x);</div><div class="line">　&#125;</div><div class="line">　test(); <span class="comment">// 1(非严格模式下)</span></div></pre></td></tr></table></figure></p>
-<p>this.x就是window.x.<br>改一改：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">　<span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line">　<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　<span class="keyword">this</span>.x = <span class="number">0</span>;</div><div class="line">　&#125;</div><div class="line">　test();</div><div class="line">　<span class="built_in">console</span>.log(x); <span class="comment">//0,改了全局x.</span></div></pre></td></tr></table></figure></p>
-<p>高难度直接调用：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"the window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">"my object"</span>,</div><div class="line"></div><div class="line">    <span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;; </div><div class="line"><span class="built_in">console</span>.log(object.getNameFunc()()); <span class="comment">//"the window"(非严格模式下)</span></div></pre></td></tr></table></figure></p>
-<p>第一个return返回的是函数，即object.getNameFunc()接收的是一个匿名函数( 记object.getNameFunc()为a )，第二个括号a()相当于直接调用.<br>a()里面的this当然是指向全局.<br>若要访问object内部的name.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"the window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">"my object"</span>,</div><div class="line"></div><div class="line">    <span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> that = <span class="keyword">this</span>; <span class="comment">//此时this指向object</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//这个return匿名函数是全局调用的，但是里面是之前保存的that不是this，故输出my object.</span></div><div class="line">            <span class="keyword">return</span> that.name;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;; <span class="comment">//另外，在构建闭包(匿名函数)全局调用getNameFunc的时候访问了内部变量that，此时that仍然引用着object.</span></div><div class="line"><span class="built_in">console</span>.log(object.getNameFunc()()); <span class="comment">//"my object"</span></div></pre></td></tr></table></figure></p>
-<p>或者更简单地：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"the window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">"my object"</span>,</div><div class="line"></div><div class="line">    <span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.name;<span class="comment">//毫无悬念地指向object</span></div><div class="line">    &#125;</div><div class="line">&#125;; </div><div class="line"><span class="built_in">console</span>.log(object.getNameFunc()); <span class="comment">//"my object"</span></div><div class="line">(object.getNameFunc = object.getNameFunc)(); <span class="comment">//"the window"</span></div><div class="line"><span class="comment">//为什么这里又输出the window？原因是这是赋值表达式，赋值后是函数本身，相当于a()，全局调用.</span></div></pre></td></tr></table></figure></p>
+<h1 id="json"><a href="#json" class="headerlink" title="json"></a>json</h1><p>(Javascript Object Notation.)是一种数据格式而非语言.</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法."></a>语法.</h3><p>可以表示以下三种类型的值.</p>
+<h4 id="简单值"><a href="#简单值" class="headerlink" title="简单值"></a>简单值</h4><p>数字，字符串，布尔值，null<br>(字符串必须使用双引号)</p>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>JSON无变量，没有变量的概念，所以没有声明变量这一步骤,语句结束也无分号.<br>如：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"name"</span>: <span class="string">"Nicolas"</span>,</div><div class="line">    <span class="attr">"age"</span>: <span class="number">29</span>,</div><div class="line">    <span class="attr">"school"</span>: &#123;</div><div class="line">        <span class="attr">"name"</span>: <span class="string">"Merrimack College"</span>,</div><div class="line">        <span class="attr">"location"</span>: <span class="string">"North Andover, MA"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>json中不能写注释.</p>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">    &#123;</div><div class="line">        <span class="attr">"title"</span>: <span class="string">"Professional JavaScript"</span>,</div><div class="line">        <span class="attr">"authors"</span>: [</div><div class="line">            <span class="string">"Nicolas C. Zakas"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"edition"</span>: <span class="number">3</span>,</div><div class="line">        <span class="attr">"year"</span>: <span class="number">2011</span></div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">        <span class="attr">"title"</span>: <span class="string">"Professional JavaScript"</span>,</div><div class="line">        <span class="attr">"authors"</span>: [</div><div class="line">            <span class="string">"Nicolas C. Zakas"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"edition"</span>: <span class="number">2</span>,</div><div class="line">        <span class="attr">"year"</span>: <span class="number">2009</span></div><div class="line">    &#125;,</div><div class="line">]</div></pre></td></tr></table></figure>
 <p><br></p>
-<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用."></a>方法调用.</h3><p>作为对象方法调用.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　<span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> o = &#123;&#125;;</div><div class="line">o.x = <span class="number">1</span>;</div><div class="line">o.m = test;</div><div class="line">o.m(); <span class="comment">// 1</span></div><div class="line"><span class="comment">//这里m变成test方法.</span></div></pre></td></tr></table></figure></p>
-<h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call,apply,bind"></a>call,apply,bind</h3><p>显而易见地改变了this的值指向新值.</p>
-<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><p>使用new的具体步骤中有改变this指向空对象这一步.</p>
+<h3 id="解析与序列化选项"><a href="#解析与序列化选项" class="headerlink" title="解析与序列化选项."></a>解析与序列化选项.</h3><h4 id="stringify-与-parse"><a href="#stringify-与-parse" class="headerlink" title="stringify() 与 parse()"></a>stringify() 与 parse()</h4><p>前者转化为JSON字符串，后者解析.<br>前者输出的JSON不包含任何空格字符或缩进，因此保存在jsontext中的字符串显示如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"title"</span>: <span class="string">"Professional JavaScript"</span>,<span class="attr">"authors"</span>: [<span class="string">"Nicolas C. Zakas"</span>],<span class="attr">"edition"</span>: <span class="number">3</span>,<span class="attr">"year"</span>: <span class="number">2011</span>&#125;</div></pre></td></tr></table></figure></p>
+<p>所有函数及原型成员都会被有意忽略，值为undefined的任何属性也会被跳过.<br><br></p>
+<h4 id="序列化选项"><a href="#序列化选项" class="headerlink" title="序列化选项"></a>序列化选项</h4><p>第二个参数： 函数<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var jsontext = JSON.stringify(book,["title","edition"]);</div></pre></td></tr></table></figure></p>
+<p>第三个参数： 缩进和空白符<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var jsontext = JSON.stringify(book,null,4);</div></pre></td></tr></table></figure></p>
+<p>换行符自动包含，缩进空格数为4;<br>也可以变成：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var jsontext = JSON.stringify(book,null,"--");</div></pre></td></tr></table></figure></p>
+<p>缩进字符串最长不能超过10个，若超过了只显示前10个.<br><br><br>可以在js任意对象中添加toJSON()方法，作为函数过滤器的补充.<br>stringify()顺序：<br>1.如果存在toJSON()方法且能通过它取得有效值，则调用该方法，否则返回对象.<br>2.如果提供了第二个参数，应用改函数过滤器.传入函数过滤器的值是第一步返回的值.<br>3.对第2步返回的值进行相应序列化.<br>4.若提供了第三个参数,执行相应格式化.</p>
+<p>Ajax待续..</p>
 <p><hr><br>以上.</p>
 
       
@@ -418,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/19/0x09/" rel="next" title="0x09">
-                <i class="fa fa-chevron-left"></i> 0x09
+              <a href="/2017/07/21/0x0A/" rel="next" title="0x0A">
+                <i class="fa fa-chevron-left"></i> 0x0A
               </a>
             
           </div>
@@ -427,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/21/0x0B/" rel="prev" title="b">
-                b <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -572,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#clock"><span class="nav-number">1.</span> <span class="nav-text">clock</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this"><span class="nav-number">2.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接调用"><span class="nav-number">2.0.1.</span> <span class="nav-text">直接调用.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法调用"><span class="nav-number">2.0.2.</span> <span class="nav-text">方法调用.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#call-apply-bind"><span class="nav-number">2.0.3.</span> <span class="nav-text">call,apply,bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new"><span class="nav-number">2.0.4.</span> <span class="nav-text">new</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#call-amp-apply-amp-bind"><span class="nav-number">1.</span> <span class="nav-text">call&apply&bind</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#apply"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">apply()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#apply-和call"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">apply()和call()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bind"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">bind()</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#json"><span class="nav-number">2.</span> <span class="nav-text">json</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">2.0.1.</span> <span class="nav-text">语法.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单值"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">简单值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象"><span class="nav-number">2.0.1.2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">2.0.1.3.</span> <span class="nav-text">数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析与序列化选项"><span class="nav-number">2.0.2.</span> <span class="nav-text">解析与序列化选项.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#stringify-与-parse"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">stringify() 与 parse()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列化选项"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">序列化选项</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
