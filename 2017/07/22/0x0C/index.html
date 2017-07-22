@@ -87,20 +87,21 @@
 
 
 
-<meta name="description" content="Summer Training Day 11. 画钟this">
+<meta name="description" content="Summer Training Day 13. LiveRe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0x0A">
-<meta property="og:url" content="https://matteokjh.github.io/2017/07/21/0x0A/index.html">
+<meta property="og:title" content="0x0C">
+<meta property="og:url" content="https://matteokjh.github.io/2017/07/22/0x0C/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 11. 画钟this">
-<meta property="og:image" content="https://matteokjh.github.io/img/clock.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/clock1.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/clock2.png">
-<meta property="og:updated_time" content="2017-07-21T12:41:28.629Z">
+<meta property="og:description" content="Summer Training Day 13. LiveRe">
+<meta property="og:image" content="https://matteokjh.github.io/img/laibili2.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/laibili3.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/laibili.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/laibili1.png">
+<meta property="og:updated_time" content="2017-07-22T05:07:54.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x0A">
-<meta name="twitter:description" content="Summer Training Day 11. 画钟this">
-<meta name="twitter:image" content="https://matteokjh.github.io/img/clock.png">
+<meta name="twitter:title" content="0x0C">
+<meta name="twitter:description" content="Summer Training Day 13. LiveRe">
+<meta name="twitter:image" content="https://matteokjh.github.io/img/laibili2.png">
 
 
 
@@ -128,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://matteokjh.github.io/2017/07/21/0x0A/"/>
+  <link rel="canonical" href="https://matteokjh.github.io/2017/07/22/0x0C/"/>
 
 
 
 
 
-  <title> 0x0A | Caster </title>
+  <title> 0x0C | Caster </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/21/0x0A/">
+    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/22/0x0C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caster.K">
@@ -308,7 +309,7 @@
             
             
               
-                0x0A
+                0x0C
               
             
           </h1>
@@ -323,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T12:49:28+08:00">
-                2017-07-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T12:54:46+08:00">
+                2017-07-22
               </time>
             
 
@@ -364,23 +365,12 @@
       
 
       
-        <p>Summer Training Day 11.</p>
-<p>画钟<br>this<br><a id="more"></a></p>
+        <p>Summer Training Day 13.</p>
+<p>LiveRe<br><a id="more"></a></p>
+<p><hr><br>今天早上照例是产品大会.进一步商讨了方案.<br>我针对自己博客的评论系统问题做出了一些改动.<br>之前提到过youyan(友言)评论系统因为没有https证书所以会被浏览器block，<br>要点击右上角加载不安全版本才能正常显示，但是这样就显得我的博客不干不净一样.<br>于是乎，在今天，我决定把它ban掉.直接换一个评论系统.<br>我认准了来必力(LiveRe),一个外国做的评论系统.这个系统有https证书，可以在博客直接加载.<br>而且新版next兼容了livere可以像youyan一样直接输个UID就能用,非常非常方便.<br>以下是教程:</p>
 <hr>
 
-<h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p><img src="/img/clock.png" alt=""><br>ummmmm..<br>没什么可说的，css设置好html,body，canvas位置关系之后，剩下的就是js.<br>先画底圆，然后刻度，然后秒分时针，最后中间点.计时器setIinterval(function,1000);<br>1秒一次，内部先clear再draw.一开始先draw一次让网页刷新就有东西.<br>具体实现利用了许多数学的东西,简单但麻烦.<br><img src="/img/clock1.png" alt=""><br><img src="/img/clock2.png" alt=""><br>强烈推荐<a href="http://colorhunt.co/" target="_blank" rel="external">colorhunt配色网站</a><br>以及<a href="https://webgradients.com/" target="_blank" rel="external">Webgradients渐变色网站</a></p>
-<hr>
-
-<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>this的四种用法：</p>
-<h3 id="直接调用"><a href="#直接调用" class="headerlink" title="直接调用."></a>直接调用.</h3><p>this指向全局对象.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">　<span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line">　<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　consloe.log(<span class="keyword">this</span>.x);</div><div class="line">　&#125;</div><div class="line">　test(); <span class="comment">// 1(非严格模式下)</span></div></pre></td></tr></table></figure></p>
-<p>this.x就是window.x.<br>改一改：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">　<span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line">　<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　<span class="keyword">this</span>.x = <span class="number">0</span>;</div><div class="line">　&#125;</div><div class="line">　test();</div><div class="line">　<span class="built_in">console</span>.log(x); <span class="comment">//0,改了全局x.</span></div></pre></td></tr></table></figure></p>
-<p>高难度直接调用：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"the window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">"my object"</span>,</div><div class="line"></div><div class="line">    <span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;; </div><div class="line"><span class="built_in">console</span>.log(object.getNameFunc()()); <span class="comment">//"the window"(非严格模式下)</span></div></pre></td></tr></table></figure></p>
-<p>第一个return返回的是函数，即object.getNameFunc()接收的是一个匿名函数( 记object.getNameFunc()为a )，第二个括号a()相当于直接调用.<br>a()里面的this当然是指向全局.<br>若要访问object内部的name.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"the window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">"my object"</span>,</div><div class="line"></div><div class="line">    <span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> that = <span class="keyword">this</span>; <span class="comment">//此时this指向object</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//这个return匿名函数是全局调用的，但是里面是之前保存的that不是this，故输出my object.</span></div><div class="line">            <span class="keyword">return</span> that.name;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;; <span class="comment">//另外，在构建闭包(匿名函数)全局调用getNameFunc的时候访问了内部变量that，此时that仍然引用着object.</span></div><div class="line"><span class="built_in">console</span>.log(object.getNameFunc()()); <span class="comment">//"my object"</span></div></pre></td></tr></table></figure></p>
-<p>或者更简单地：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"the window"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">"my object"</span>,</div><div class="line"></div><div class="line">    <span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.name;<span class="comment">//毫无悬念地指向object</span></div><div class="line">    &#125;</div><div class="line">&#125;; </div><div class="line"><span class="built_in">console</span>.log(object.getNameFunc()); <span class="comment">//"my object"</span></div><div class="line">(object.getNameFunc = object.getNameFunc)(); <span class="comment">//"the window"</span></div><div class="line"><span class="comment">//为什么这里又输出the window？原因是这是赋值表达式，赋值后是函数本身，相当于a()，全局调用.</span></div></pre></td></tr></table></figure></p>
-<p><br></p>
-<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用."></a>方法调用.</h3><p>作为对象方法调用.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　<span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> o = &#123;&#125;;</div><div class="line">o.x = <span class="number">1</span>;</div><div class="line">o.m = test;</div><div class="line">o.m(); <span class="comment">// 1</span></div><div class="line"><span class="comment">//这里m变成test方法.</span></div></pre></td></tr></table></figure></p>
-<h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call,apply,bind"></a>call,apply,bind</h3><p>显而易见地改变了this的值指向新值.</p>
-<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><p>使用new的具体步骤中有改变this指向空对象这一步.</p>
+<p>百度livere，进入官网，可以设置语言为中文，方便操作.<br>点击右上角注册，一步一步填写关于你个人网页的信息，设置评论推送，显示分页方式等等.<br>之后就会输出一串js代码：<br><img src="/img/laibili2.png" alt=""><br>获取如图所示的一串UID，复制到 next 主题配置文件(/theme/next/_config.yml)中的对应位置即可.<br><img src="/img/laibili3.png" alt=""><br>真的是非常非常简单！<br><img src="/img/laibili.png" alt=""><br><img src="/img/laibili1.png" alt=""><br>另外可以看到，上官网个人信息可以管理自己博客的评论，查看等等..实在是太强大了.</p>
 <p><hr><br>以上.</p>
 
       
@@ -418,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/19/0x09/" rel="next" title="0x09">
-                <i class="fa fa-chevron-left"></i> 0x09
+              <a href="/2017/07/21/0x0B/" rel="next" title="0x0B">
+                <i class="fa fa-chevron-left"></i> 0x0B
               </a>
             
           </div>
@@ -427,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/21/0x0B/" rel="prev" title="0x0B">
-                0x0B <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -479,17 +465,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -562,22 +539,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#clock"><span class="nav-number">1.</span> <span class="nav-text">clock</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this"><span class="nav-number">2.</span> <span class="nav-text">this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接调用"><span class="nav-number">2.0.1.</span> <span class="nav-text">直接调用.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法调用"><span class="nav-number">2.0.2.</span> <span class="nav-text">方法调用.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#call-apply-bind"><span class="nav-number">2.0.3.</span> <span class="nav-text">call,apply,bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new"><span class="nav-number">2.0.4.</span> <span class="nav-text">new</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
