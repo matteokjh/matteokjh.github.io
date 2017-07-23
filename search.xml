@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[0 x 0D]]></title>
+    <url>%2F2017%2F07%2F24%2F0x0D%2F</url>
+    <content type="text"><![CDATA[Summer Training Day 14. 休息日. 真没有内容..弄成折叠的没别的意思,只是相关统计以及评论系统无法在主页加载. 以上.]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[0x0C]]></title>
     <url>%2F2017%2F07%2F22%2F0x0C%2F</url>
     <content type="text"><![CDATA[Summer Training Day 13. LiveRe 今天早上照例是产品大会.进一步商讨了方案.我针对自己博客的评论系统问题做出了一些改动.之前提到过youyan(友言)评论系统因为没有https证书所以会被浏览器block，要点击右上角加载不安全版本才能正常显示，但是这样就显得我的博客不干不净一样.于是乎，在今天，我决定把它ban掉.直接换一个评论系统.我认准了来必力(LiveRe),一个外国做的评论系统.这个系统有https证书，可以在博客直接加载.而且新版next兼容了livere可以像youyan一样直接输个UID就能用,非常非常方便.以下是教程: 百度livere，进入官网，可以设置语言为中文，方便操作.点击右上角注册，一步一步填写关于你个人网页的信息，设置评论推送，显示分页方式等等.之后就会输出一串js代码：获取如图所示的一串UID，复制到 next 主题配置文件(/theme/next/_config.yml)中的对应位置即可.真的是非常非常简单！另外可以看到，上官网个人信息可以管理自己博客的评论，查看等等..实在是太强大了. 以上.]]></content>
