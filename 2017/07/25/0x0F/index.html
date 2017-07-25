@@ -87,19 +87,24 @@
 
 
 
-<meta name="description" content="Summer Training Day 8. IFE Task 15异步，作用域与闭包">
+<meta name="description" content="Summer Training Day 16. 腾讯云Browsersync">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0x07">
-<meta property="og:url" content="https://matteokjh.github.io/2017/07/17/0x07/index.html">
+<meta property="og:title" content="0x0F">
+<meta property="og:url" content="https://matteokjh.github.io/2017/07/25/0x0F/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 8. IFE Task 15异步，作用域与闭包">
-<meta property="og:image" content="https://matteokjh.github.io/img/innertext.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/scope.png">
-<meta property="og:updated_time" content="2017-07-21T11:33:04.587Z">
+<meta property="og:description" content="Summer Training Day 16. 腾讯云Browsersync">
+<meta property="og:image" content="https://matteokjh.github.io/img/tx1.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/php.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/magic.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/fail.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/ye.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/yeye.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/brow.png">
+<meta property="og:updated_time" content="2017-07-25T16:07:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x07">
-<meta name="twitter:description" content="Summer Training Day 8. IFE Task 15异步，作用域与闭包">
-<meta name="twitter:image" content="https://matteokjh.github.io/img/innertext.png">
+<meta name="twitter:title" content="0x0F">
+<meta name="twitter:description" content="Summer Training Day 16. 腾讯云Browsersync">
+<meta name="twitter:image" content="https://matteokjh.github.io/img/tx1.png">
 
 
 
@@ -127,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://matteokjh.github.io/2017/07/17/0x07/"/>
+  <link rel="canonical" href="https://matteokjh.github.io/2017/07/25/0x0F/"/>
 
 
 
 
 
-  <title> 0x07 | Caster </title>
+  <title> 0x0F | Caster </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +291,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/17/0x07/">
+    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/25/0x0F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caster.K">
@@ -307,7 +312,7 @@
             
             
               
-                0x07
+                0x0F
               
             
           </h1>
@@ -322,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T13:47:32+08:00">
-                2017-07-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-25T16:12:29+08:00">
+                2017-07-25
               </time>
             
 
@@ -363,26 +368,24 @@
       
 
       
-        <p>Summer Training Day 8.</p>
-<p>IFE Task 15<br>异步，作用域与闭包<br><a id="more"></a><br>第二周的第一天.</p>
+        <p>Summer Training Day 16.</p>
+<p>腾讯云<br>Browsersync<br><a id="more"></a></p>
 <hr>
 
-<h1 id="IFE-Task"><a href="#IFE-Task" class="headerlink" title="IFE Task."></a>IFE Task.</h1><hr>
-
-<h3 id="Task-15"><a href="#Task-15" class="headerlink" title="Task 15."></a>Task 15.</h3><p><br><br><img src="/img/innertext.png" alt="">;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">innerText<span class="comment">//除去html标签外的内容.</span></div><div class="line">split<span class="comment">//split("",num)方法用于把一个字符串分割成字符串数组.左参数为分割标准，右参数为长度(可选).</span></div><div class="line">childnodes<span class="comment">//我们平时用document.getElementById("")获取的是元素节点，非文本节点，childnodes获取的即是元素节点的子节点(包括文本).</span></div><div class="line">nodeValue<span class="comment">//获取节点值</span></div><div class="line">push<span class="comment">//push方法在数组末尾添加一个或多个元素，并返回新长度(注意是长度数值而非返回新数组).</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">getData();<span class="comment">//获取</span></div><div class="line">sort();<span class="comment">//排序</span></div><div class="line">render();<span class="comment">//显示</span></div><div class="line">btnhandle();<span class="comment">//绑定按钮</span></div><div class="line">init();<span class="comment">//执行</span></div></pre></td></tr></table></figure>
-<p>最后加一句防止按钮重复点击：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(resort.innerText == <span class="string">""</span>)</div></pre></td></tr></table></figure></p>
+<h1 id="腾讯云服务器"><a href="#腾讯云服务器" class="headerlink" title="腾讯云服务器."></a>腾讯云服务器.</h1><p>试用七天.CentOS64.<br>顺便学到了查看文件大小和剩余空间的linux指令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">du -sh <span class="comment"># 查看当前文件夹下所有文件大小.</span></div><div class="line">df -hl <span class="comment"># 剩余容量.</span></div></pre></td></tr></table></figure></p>
+<h3 id="下载screen"><a href="#下载screen" class="headerlink" title="下载screen."></a>下载screen.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install screen</div></pre></td></tr></table></figure>
+<p>查看:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">screen -ls</div></pre></td></tr></table></figure></p>
 <hr>
 
-<h1 id="异步、作用域与闭包"><a href="#异步、作用域与闭包" class="headerlink" title="异步、作用域与闭包."></a>异步、作用域与闭包.</h1><p><br></p>
-<h3 id="执行环境与作用域"><a href="#执行环境与作用域" class="headerlink" title="执行环境与作用域"></a>执行环境与作用域</h3><p>1.<strong>执行环境</strong>(execution context,简称环境)，每个环境都有与之对应的一个变量对象(variable object)，包含在环境中定义的所有变量和函数。全局执行环境，是最外围的执行环境，在Web中被认为是windows对象。某个执行环境中的代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁，但在全局执行环境的直到应用程序退出才会被销毁。<br>2.每个函数都有自己的执行环境，当执行流进入一个函数，函数的环境会被推入一个<strong>环境栈</strong>中，执行完之后栈将其环境弹出，把控制权交还给之前的执行环境。<br>3.当代码在一个环境中执行时，会创建变量对象的一个<strong>作用域链</strong>(scope chain)。其前端始终是当前执行的代码所在环境的变量对象。如果是函数，则其<strong>活动对象</strong>(activation object)为变量对象。活动对象最开始时只包含argument对象(此对象在全局是不存在的)，全局执行环境的变量始终是作用域链的最后一个对象。<br>(摘自JavaScript高级程序设计)<br><br></p>
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>定义：<strong>闭包</strong>是指有权访问另一个函数作用域中的变量的函数。<br>在函数内部创建另一个函数就是一种创建闭包。<br><br>攻略↓<br><a href="https://zhuanlan.zhihu.com/p/25407758" target="_blank" rel="external">Excuse me？这个前端88面试在搞事！</a><br><a href="http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html" target="_blank" rel="external">汤姆大叔的博客:”深入理解JavaScript系列（16）：闭包（Closures）”</a><br><br><img src="/img/scope.png" alt=""><br>所以，不只是setTimeout的问题.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;, <span class="number">1000</span> * i);</div><div class="line">&#125; <span class="comment">//输出5个5</span></div></pre></td></tr></table></figure>
-<p>与</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = [];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k = <span class="number">0</span>; k &lt; <span class="number">3</span>; k++) &#123;</div><div class="line">  data[k] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    alert(k);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">data[<span class="number">0</span>](); <span class="comment">// 3, 而不是0</span></div><div class="line">data[<span class="number">1</span>](); <span class="comment">// 3, 而不是1</span></div><div class="line">data[<span class="number">2</span>](); <span class="comment">// 3, 而不是2</span></div><div class="line"><span class="comment">//上下文共用一个[[scope]]属性，故k改变</span></div></pre></td></tr></table></figure>
-<p>解决方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(i);</div><div class="line">    &#125;, i * <span class="number">1000</span>);</div><div class="line">  &#125;)(i);</div><div class="line">&#125;<span class="comment">//在匿名函数外部加闭包</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//也可以在匿名函数内部return里边加闭包</span></div><div class="line"><span class="comment">//@汤姆大叔 版本</span></div><div class="line"><span class="keyword">var</span> data = [];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k = <span class="number">0</span>; k &lt; <span class="number">3</span>; k++) &#123;</div><div class="line">  data[k] = (<span class="function"><span class="keyword">function</span> <span class="title">_helper</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      alert(x);</div><div class="line">    &#125;;</div><div class="line">  &#125;)(k); <span class="comment">// 传入"k"值</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 现在结果是正确的了</span></div><div class="line">data[<span class="number">0</span>](); <span class="comment">// 0</span></div><div class="line">data[<span class="number">1</span>](); <span class="comment">// 1</span></div><div class="line">data[<span class="number">2</span>](); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
-<p>其实归根结底是函数声明但没有执行的问题.</p>
+<h3 id="下载node-amp-npm"><a href="#下载node-amp-npm" class="headerlink" title="下载node&amp;npm."></a>下载node&amp;npm.</h3><p><a href="http://www.cnblogs.com/yepo/p/5714792.html" target="_blank" rel="external">Linux下安装NodeJS</a><br>按教程走，版本改成官网最新的.其中ln部分需要改成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s /usr/<span class="built_in">local</span>/node/lib/node_modules/npm/bin/npm-cli.js npm</div></pre></td></tr></table></figure></p>
+<p>其实就是看cli.js在哪.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure></p>
+<p>检查版本</p>
+<hr>
+
+<h3 id="下载lnmp"><a href="#下载lnmp" class="headerlink" title="下载lnmp."></a>下载lnmp.</h3><p><small>失败无数次</small><br>每次按照步骤走走到最后都是失败的.报错原因是php下载失败.<br><img src="/img/tx1.png" alt=""><br>算了不做了去他丫的…今天就这样吧.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>开玩笑的，<br>接下来尝试论坛上的oninstack方法.<br><a href="http://bbs.qcloud.com/thread-8480-1-1.html" target="_blank" rel="external"> 腾讯云Linux服务器一键安装LAMP/LNMP/LANMP环境</a><br><a href="https://oneinstack.com/install/" target="_blank" rel="external">官网下载安装</a><br>顺着教程我终于下好了Php(感动)<br><img src="/img/php.png" alt=""><br>另外一个有趣的地方是它有一个命名：<br><img src="/img/magic.png" alt=""><br>(magic wand魔杖);<br>但是我发现这个安装Php是可以，但是mySQL又出问题了.<br>我顺着重装发现了疑似原因：<br><img src="/img/fail.png" alt=""><br>这里大部分看不懂，但是下方值得注意的是出现了tencentyun字样，也许是腾讯云处于试用阶段限制了一些功能吧，总之貌似是镜像下载失败(找不到or网站问题).然后中间突出的部分是yum,我复制粘贴yum那一段去百度看能不能找到解决办法.结果真找到了.简而言之就是要换个yum源，换成阿里云的(真irony)，我又查了一下换源的步骤，备份好原来的，然后移除出原文件夹，下载阿里的yum源(wget 网址)就好.需要留意的是即便是阿里云也有些网页无法访问，就是说yum源可能会有缺东西，所幸成功重装.<br><img src="/img/ye.png" alt=""><br>之后打开腾讯云服务器管理页面获取公网ip输入就能访问啦~<br><img src="/img/yeye.png" alt=""><br>一开始什么都没有，而且我还没布置ftp服务器.<br>明天继续吧~<br><small>另外，今天折腾服务器一天也学到不少新指令，之后跟ftp一并写了吧.</small></p>
+<hr>
+
+<h1 id="browsersync"><a href="#browsersync" class="headerlink" title="browsersync."></a>browsersync.</h1><p>ctrl + s 后网页自动刷新的插件.<br>上官网<a href="http://www.browsersync.cn/" target="_blank" rel="external">Browsersync</a>看教程.<br>需要注意的是vs community本地是用不了的，但代理方法又好像用不了，于是用vscode吧.<br><img src="/img/brow.png" alt=""></p>
 <p><hr><br>以上.</p>
 
       
@@ -420,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/16/0x06/" rel="next" title="0x06">
-                <i class="fa fa-chevron-left"></i> 0x06
+              <a href="/2017/07/24/0x0E/" rel="next" title="0x0E">
+                <i class="fa fa-chevron-left"></i> 0x0E
               </a>
             
           </div>
@@ -429,10 +432,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/18/0x08/" rel="prev" title="0x08">
-                0x08 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -574,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IFE-Task"><span class="nav-number">1.</span> <span class="nav-text">IFE Task.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task-15"><span class="nav-number">1.0.1.</span> <span class="nav-text">Task 15.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步、作用域与闭包"><span class="nav-number">2.</span> <span class="nav-text">异步、作用域与闭包.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境与作用域"><span class="nav-number">2.0.1.</span> <span class="nav-text">执行环境与作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">2.0.2.</span> <span class="nav-text">闭包</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#腾讯云服务器"><span class="nav-number">1.</span> <span class="nav-text">腾讯云服务器.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载screen"><span class="nav-number">1.0.1.</span> <span class="nav-text">下载screen.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载node-amp-npm"><span class="nav-number">1.0.2.</span> <span class="nav-text">下载node&npm.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载lnmp"><span class="nav-number">1.0.3.</span> <span class="nav-text">下载lnmp.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#browsersync"><span class="nav-number">2.</span> <span class="nav-text">browsersync.</span></a></li></ol></div>
             
 
           </div>
