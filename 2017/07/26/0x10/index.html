@@ -87,18 +87,21 @@
 
 
 
-<meta name="description" content="Summer Training Day 17.">
+<meta name="description" content="Summer Training Day 17. lose.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0x10">
 <meta property="og:url" content="https://matteokjh.github.io/2017/07/26/0x10/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 17.">
+<meta property="og:description" content="Summer Training Day 17. lose.">
 <meta property="og:image" content="https://matteokjh.github.io/img/php1.png">
 <meta property="og:image" content="https://matteokjh.github.io/img/site.png">
-<meta property="og:updated_time" content="2017-07-26T03:24:44.062Z">
+<meta property="og:image" content="https://matteokjh.github.io/img/damn.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/fuck.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/chown.png">
+<meta property="og:updated_time" content="2017-07-26T12:48:39.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0x10">
-<meta name="twitter:description" content="Summer Training Day 17.">
+<meta name="twitter:description" content="Summer Training Day 17. lose.">
 <meta name="twitter:image" content="https://matteokjh.github.io/img/php1.png">
 
 
@@ -363,10 +366,31 @@
       
 
       
-        <p>Summer Training Day 17.<br><a id="more"></a> </p>
+        <p>Summer Training Day 17.</p>
+<p>lose.<br><a id="more"></a> </p>
 <hr>
 
 <h1 id="Wordpress"><a href="#Wordpress" class="headerlink" title="Wordpress"></a>Wordpress</h1><p>昨天lnmp，今天wordpress.<br><br><br>帮了大忙的攻略:<br><a href="http://blog.csdn.net/qq_32846595/article/details/54744403" target="_blank" rel="external"> 将wordpress安装到已经是lnmp环境的腾讯云服务器</a><br>按照博客步骤下载安装wordpress，然后进入 外网ip/wordpress 填写信息，他会给你一个wp-config.php 代码，复制，在服务器内wordpress目录下新建wp-config.php粘贴就好.<br>需要注意的是，检查腾讯云复制粘贴按键有没有正常粘贴.正常的应该是代码高亮的.而且腾讯云粘贴键不支持中文.还有要注意大小写(被坑了一个钟).<br>正常的wp-config.php应该是这样的.<br><img src="/img/php1.png" alt=""><br>外网ip/wordpress<br>安装，记住他给的记不住的密码.<br>大功告成.<br><img src="/img/site.png" alt=""></p>
+<hr>
+
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><a href="http://www.2zzt.com/" target="_blank" rel="external">爱找主题</a></p>
+<hr>
+
+<h3 id="FTP服务器"><a href="#FTP服务器" class="headerlink" title="FTP服务器."></a>FTP服务器.</h3><p>攻略↓<br><a href="http://blog.csdn.net/tingyun_say/article/details/51767715" target="_blank" rel="external"> 腾讯云服务器ftp部署及文件上传</a><br>按照攻略走到最后能启动ftp但是不能上传下载.<br>又看了<br><a href="https://segmentfault.com/a/1190000008161400" target="_blank" rel="external">CentOS7安装配置vsftp搭建FTP</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/vsftpd/vsftpd.conf | grep ^[^<span class="comment">#]  # 检查vsftpd.conf是否配置正确.</span></div></pre></td></tr></table></figure>
+<p>折腾一天,<br>最终还是失败了..<br><img src="/img/damn.png" alt=""><br>但是vsftp服务是能开起来的<br><img src="/img/fuck.png" alt=""><br>不解，不解.</p>
+<hr>
+
+<h3 id="学到的新指令"><a href="#学到的新指令" class="headerlink" title="学到的新指令."></a>学到的新指令.</h3><h4 id="user相关"><a href="#user相关" class="headerlink" title="user相关"></a>user相关</h4><p>添加用户：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">useradd [name] <span class="comment"># 最后加名字就好</span></div><div class="line"></div><div class="line">-c [comment] <span class="comment"># 指定一段注释性描述。</span></div><div class="line">-d [directory] <span class="comment"># 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录。</span></div><div class="line">-g [group] <span class="comment"># 指定用户所属的用户组。</span></div><div class="line">-G[group,group] <span class="comment"># 指定用户所属的附加组。</span></div><div class="line">-s [Shell文件] <span class="comment"># 指定用户的登录Shell。</span></div><div class="line">-u [UID] <span class="comment"># 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。</span></div></pre></td></tr></table></figure></p>
+<p>修改uesr信息(usermod)：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">usermod -l [new name] [old name] <span class="comment"># 改名</span></div><div class="line"></div><div class="line">-a|--append  <span class="comment">##把用户追加到某些组中，仅与-G选项一起使用 </span></div><div class="line">-c|--comment <span class="comment">##修改/etc/passwd文件第五段comment </span></div><div class="line">-d|--home    <span class="comment">##修改用户的家目录通常和-m选项一起使用 </span></div><div class="line">-e|--expiredate  <span class="comment">##指定用户帐号禁用的日期，格式YY-MM-DD </span></div><div class="line">-f|--inactive    <span class="comment">##用户密码过期多少天后采用就禁用该帐号，0表示密码已过期就禁用帐号，-1表示禁用此功能，默认值是-1 </span></div><div class="line">-g|--gid     <span class="comment">##修改用户的gid，改组一定存在</span></div><div class="line">-G|--groups  <span class="comment">##把用户追加到某些组中，仅与-a选项一起使用 </span></div><div class="line">-L|--lock    <span class="comment">##锁定用户的密码 </span></div><div class="line">-m|--move-home   <span class="comment">##修改用户的家目录通常和-d选项一起使用 </span></div><div class="line">-s|--shell   <span class="comment">##修改用户的shell </span></div><div class="line">-u|--uid     <span class="comment">##修改用户的uid，该uid必须唯一 </span></div><div class="line">-U|--unlock  <span class="comment">##解锁用户的密码</span></div></pre></td></tr></table></figure></p>
+<p>密码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">passwd [name] <span class="comment"># 设置密码</span></div><div class="line"></div><div class="line">-d： <span class="comment"># 删除密码，仅有系统管理者才能使用； </span></div><div class="line">-f： <span class="comment"># 强制执行；</span></div><div class="line">-k： <span class="comment"># 设置只有在密码过期失效后，方能更新； </span></div><div class="line">-l： <span class="comment"># 锁住密码； </span></div><div class="line">-s： <span class="comment"># 列出密码的相关信息，仅有系统管理者才能使用； </span></div><div class="line">-u： <span class="comment"># 解开已上锁的帐号。</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div><div class="line"><span class="comment"># 可以查看所有用户.</span></div></pre></td></tr></table></figure>
+<hr>
+
+<h3 id="小问题"><a href="#小问题" class="headerlink" title="小问题."></a>小问题.</h3><p>关于权限问题不能上传页头图片.<br>仿照链接<br><a href="http://blog.csdn.net/qq_32846595/article/details/54766833" target="_blank" rel="external"> 解决wordpress下载插件，安装失败，无法创建目录问题</a><br>修改owner就好.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -l wordpress  <span class="comment"># 在default下查看</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown -R www:www wordpress <span class="comment"># 修改.</span></div></pre></td></tr></table></figure>
+<p><img src="/img/chown.png" alt=""></p>
 
       
     </div>
@@ -553,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Wordpress"><span class="nav-number">1.</span> <span class="nav-text">Wordpress</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Wordpress"><span class="nav-number">1.</span> <span class="nav-text">Wordpress</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number">1.0.1.</span> <span class="nav-text">主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FTP服务器"><span class="nav-number">1.0.2.</span> <span class="nav-text">FTP服务器.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学到的新指令"><span class="nav-number">1.0.3.</span> <span class="nav-text">学到的新指令.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#user相关"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">user相关</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小问题"><span class="nav-number">1.0.4.</span> <span class="nav-text">小问题.</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
