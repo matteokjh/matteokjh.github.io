@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[0x10]]></title>
+    <url>%2F2017%2F07%2F26%2F0x10%2F</url>
+    <content type="text"><![CDATA[Summer Training Day 17. Wordpress昨天lnmp，今天wordpress.帮了大忙的攻略: 将wordpress安装到已经是lnmp环境的腾讯云服务器按照博客步骤下载安装wordpress，然后进入 外网ip/wordpress 填写信息，他会给你一个wp-config.php 代码，复制，在服务器内wordpress目录下新建wp-config.php粘贴就好.需要注意的是，检查腾讯云复制粘贴按键有没有正常粘贴.正常的应该是代码高亮的.而且腾讯云粘贴键不支持中文.还有要注意大小写(被坑了一个钟).正常的wp-config.php应该是这样的.外网ip/wordpress安装，记住他给的记不住的密码.大功告成.]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[0x0F]]></title>
     <url>%2F2017%2F07%2F25%2F0x0F%2F</url>
     <content type="text"><![CDATA[Summer Training Day 16. 腾讯云Browsersync 腾讯云服务器.试用七天.CentOS64.顺便学到了查看文件大小和剩余空间的linux指令:12du -sh # 查看当前文件夹下所有文件大小.df -hl # 剩余容量. 下载screen.1yum install screen 查看:1screen -ls 下载node&amp;npm.Linux下安装NodeJS按教程走，版本改成官网最新的.其中ln部分需要改成1ln -s /usr/local/node/lib/node_modules/npm/bin/npm-cli.js npm 其实就是看cli.js在哪.1node -v 检查版本 下载lnmp.失败无数次每次按照步骤走走到最后都是失败的.报错原因是php下载失败.算了不做了去他丫的…今天就这样吧.开玩笑的，接下来尝试论坛上的oninstack方法. 腾讯云Linux服务器一键安装LAMP/LNMP/LANMP环境官网下载安装顺着教程我终于下好了Php(感动)另外一个有趣的地方是它有一个命名：(magic wand魔杖);但是我发现这个安装Php是可以，但是mySQL又出问题了.我顺着重装发现了疑似原因：这里大部分看不懂，但是下方值得注意的是出现了tencentyun字样，也许是腾讯云处于试用阶段限制了一些功能吧，总之貌似是镜像下载失败(找不到or网站问题).然后中间突出的部分是yum,我复制粘贴yum那一段去百度看能不能找到解决办法.结果真找到了.简而言之就是要换个yum源，换成阿里云的(真irony)，我又查了一下换源的步骤，备份好原来的，然后移除出原文件夹，下载阿里的yum源(wget 网址)就好.需要留意的是即便是阿里云也有些网页无法访问，就是说yum源可能会有缺东西，所幸成功重装.之后打开腾讯云服务器管理页面获取公网ip输入就能访问啦~一开始什么都没有，而且我还没布置ftp服务器.明天继续吧~另外，今天折腾服务器一天也学到不少新指令，之后跟ftp一并写了吧. browsersync.ctrl + s 后网页自动刷新的插件.上官网Browsersync看教程.需要注意的是vs community本地是用不了的，但代理方法又好像用不了，于是用vscode吧. 以上.]]></content>
