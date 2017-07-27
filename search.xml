@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[0x11]]></title>
+    <url>%2F2017%2F07%2F27%2F0x11%2F</url>
+    <content type="text"><![CDATA[Summer Training Day 18. FTP FTP真相大白关于昨天失败的原因,其实一部分是由于我腾讯云安全组没把所有端口放开.今天放开了就立刻能打开ftp了.当然肯定不是所有端口都放开的，昨天按教程放开了TCP：21和linux 22不行，就不知道是哪个端口.这么做有安全隐患. 还有就是在下载oneinstack的时候，有个选项…对就是最下面那个pureFTPd…原来在这里已经装上了,昨天还傻傻的装了vsFTPd..辛苦一天配置的vsFTPd，结果无法启动.当然是因为已经启动了pureFTPd啊..早上的时候担心两个ftp会崩，结果重置了服务器..其实应该不用，只要卸掉vsFTPd再在安全组开放全端口就好了.Centos下pure-ftpd安装配置详解 Filezilla.最终还是下了个软件…很方便，传输文件用鼠标拖就行.就是记住一点：不要点quickconnect.点左上角file-&gt;site manager.添加信息connect,选unsafe那个避免TLS.不然传不了. 至于wordpress，非常强大，很多功能待发掘.]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[0x10]]></title>
     <url>%2F2017%2F07%2F26%2F0x10%2F</url>
     <content type="text"><![CDATA[Summer Training Day 17. lose. Wordpress昨天lnmp，今天wordpress.帮了大忙的攻略: 将wordpress安装到已经是lnmp环境的腾讯云服务器按照博客步骤下载安装wordpress，然后进入 外网ip/wordpress 填写信息，他会给你一个wp-config.php 代码，复制，在服务器内wordpress目录下新建wp-config.php粘贴就好.需要注意的是，检查腾讯云复制粘贴按键有没有正常粘贴.正常的应该是代码高亮的.而且腾讯云粘贴键不支持中文.还有要注意大小写(被坑了一个钟).正常的wp-config.php应该是这样的.外网ip/wordpress安装，记住他给的记不住的密码.大功告成. 主题爱找主题 FTP服务器.攻略↓ 腾讯云服务器ftp部署及文件上传按照攻略走到最后能启动ftp但是不能上传下载.又看了CentOS7安装配置vsftp搭建FTP 1cat /etc/vsftpd/vsftpd.conf | grep ^[^#] # 检查vsftpd.conf是否配置正确. 折腾一天,最终还是失败了..但是vsftp服务是能开起来的不解，不解. 学到的新指令.user相关添加用户：12345678useradd [name] # 最后加名字就好-c [comment] # 指定一段注释性描述。-d [directory] # 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录。-g [group] # 指定用户所属的用户组。-G[group,group] # 指定用户所属的附加组。-s [Shell文件] # 指定用户的登录Shell。-u [UID] # 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。 修改uesr信息(usermod)：1234567891011121314usermod -l [new name] [old name] # 改名-a|--append ##把用户追加到某些组中，仅与-G选项一起使用 -c|--comment ##修改/etc/passwd文件第五段comment -d|--home ##修改用户的家目录通常和-m选项一起使用 -e|--expiredate ##指定用户帐号禁用的日期，格式YY-MM-DD -f|--inactive ##用户密码过期多少天后采用就禁用该帐号，0表示密码已过期就禁用帐号，-1表示禁用此功能，默认值是-1 -g|--gid ##修改用户的gid，改组一定存在-G|--groups ##把用户追加到某些组中，仅与-a选项一起使用 -L|--lock ##锁定用户的密码 -m|--move-home ##修改用户的家目录通常和-d选项一起使用 -s|--shell ##修改用户的shell -u|--uid ##修改用户的uid，该uid必须唯一 -U|--unlock ##解锁用户的密码 密码：12345678passwd [name] # 设置密码-d： # 删除密码，仅有系统管理者才能使用； -f： # 强制执行；-k： # 设置只有在密码过期失效后，方能更新； -l： # 锁住密码； -s： # 列出密码的相关信息，仅有系统管理者才能使用； -u： # 解开已上锁的帐号。 12cat /etc/passwd# 可以查看所有用户. 小问题.关于权限问题不能上传页头图片.仿照链接 解决wordpress下载插件，安装失败，无法创建目录问题修改owner就好. 1ls -l wordpress # 在default下查看 1chown -R www:www wordpress # 修改.]]></content>

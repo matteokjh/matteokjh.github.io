@@ -87,21 +87,23 @@
 
 
 
-<meta name="description" content="Summer Training Day 13. LiveRe">
+<meta name="description" content="Summer Training Day 18. FTP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0x0C">
-<meta property="og:url" content="https://matteokjh.github.io/2017/07/22/0x0C/index.html">
+<meta property="og:title" content="0x11">
+<meta property="og:url" content="https://matteokjh.github.io/2017/07/27/0x11/index.html">
 <meta property="og:site_name" content="Caster">
-<meta property="og:description" content="Summer Training Day 13. LiveRe">
-<meta property="og:image" content="https://matteokjh.github.io/img/laibili2.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/laibili3.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/laibili.png">
-<meta property="og:image" content="https://matteokjh.github.io/img/laibili1.png">
-<meta property="og:updated_time" content="2017-07-22T05:07:54.633Z">
+<meta property="og:description" content="Summer Training Day 18. FTP">
+<meta property="og:image" content="https://matteokjh.github.io/img/ftptruth.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/pureftpd.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/ftptruth.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/upload.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/filezilla.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/20170727161553.png">
+<meta property="og:updated_time" content="2017-07-27T08:17:10.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0x0C">
-<meta name="twitter:description" content="Summer Training Day 13. LiveRe">
-<meta name="twitter:image" content="https://matteokjh.github.io/img/laibili2.png">
+<meta name="twitter:title" content="0x11">
+<meta name="twitter:description" content="Summer Training Day 18. FTP">
+<meta name="twitter:image" content="https://matteokjh.github.io/img/ftptruth.png">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://matteokjh.github.io/2017/07/22/0x0C/"/>
+  <link rel="canonical" href="https://matteokjh.github.io/2017/07/27/0x11/"/>
 
 
 
 
 
-  <title> 0x0C | Caster </title>
+  <title> 0x11 | Caster </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -288,7 +290,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/22/0x0C/">
+    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/07/27/0x11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caster.K">
@@ -309,7 +311,7 @@
             
             
               
-                0x0C
+                0x11
               
             
           </h1>
@@ -324,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T12:54:46+08:00">
-                2017-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-27T12:59:58+08:00">
+                2017-07-27
               </time>
             
 
@@ -365,13 +367,17 @@
       
 
       
-        <p>Summer Training Day 13.</p>
-<p>LiveRe<br><a id="more"></a></p>
-<p><hr><br>今天早上照例是产品大会.进一步商讨了方案.<br>我针对自己博客的评论系统问题做出了一些改动.<br>之前提到过youyan(友言)评论系统因为没有https证书所以会被浏览器block，<br>要点击右上角加载不安全版本才能正常显示，但是这样就显得我的博客不干不净一样.<br>于是乎，在今天，我决定把它ban掉.直接换一个评论系统.<br>我认准了来必力(LiveRe),一个外国做的评论系统.这个系统有https证书，可以在博客直接加载.<br>而且新版next兼容了livere可以像youyan一样直接输个UID就能用,非常非常方便.<br>以下是教程:</p>
+        <p>Summer Training Day 18.</p>
+<p>FTP<br><a id="more"></a></p>
 <hr>
 
-<p>百度livere，进入官网，可以设置语言为中文，方便操作.<br>点击右上角注册，一步一步填写关于你个人网页的信息，设置评论推送，显示分页方式等等.<br>之后就会输出一串js代码：<br><img src="/img/laibili2.png" alt=""><br>获取如图所示的一串UID，复制到 next 主题配置文件(/theme/next/_config.yml)中的对应位置即可.<br><img src="/img/laibili3.png" alt=""><br>真的是非常非常简单！<br><img src="/img/laibili.png" alt=""><br><img src="/img/laibili1.png" alt=""><br>另外可以看到，上官网个人信息可以管理自己博客的评论，查看等等..实在是太强大了.</p>
-<p><hr><br>以上.</p>
+<h1 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h1><p><small>真相大白</small><br>关于昨天失败的原因,其实一部分是由于我腾讯云安全组没把所有端口放开.<br>今天放开了就立刻能打开ftp了.<br><img src="/img/ftptruth.png" alt=""><br>当然肯定不是所有端口都放开的，昨天按教程放开了TCP：21和linux 22不行，就不知道是哪个端口.<br>这么做有安全隐患.</p>
+<hr>
+
+
+<p>还有就是在下载oneinstack的时候，有个选项…<br><img src="/img/pureftpd.png" alt=""><br>对就是最下面那个pureFTPd…原来在这里已经装上了,昨天还傻傻的装了vsFTPd..<br>辛苦一天配置的vsFTPd，结果无法启动.当然是因为已经启动了pureFTPd啊..<br>早上的时候担心两个ftp会崩，结果重置了服务器..其实应该不用，只要卸掉vsFTPd再在安全组开放全端口就好了.<br><img src="/img/ftptruth.png" alt=""><br><img src="/img/upload.png" alt=""><br><a href="http://blog.csdn.net/slovyz/article/details/47834611" target="_blank" rel="external">Centos下pure-ftpd安装配置详解</a></p>
+<h3 id="Filezilla"><a href="#Filezilla" class="headerlink" title="Filezilla."></a>Filezilla.</h3><p>最终还是下了个软件…<br><img src="/img/filezilla.png" alt=""><br>很方便，传输文件用鼠标拖就行.就是记住一点：不要点quickconnect.点左上角file-&gt;site manager.<br>添加信息connect,选unsafe那个避免TLS.不然传不了.</p>
+<p>至于wordpress，非常强大，很多功能待发掘.<br><img src="/img/20170727161553.png" alt=""></p>
 
       
     </div>
@@ -408,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/21/0x0B/" rel="next" title="0x0B">
-                <i class="fa fa-chevron-left"></i> 0x0B
+              <a href="/2017/07/26/0x10/" rel="next" title="0x10">
+                <i class="fa fa-chevron-left"></i> 0x10
               </a>
             
           </div>
@@ -417,10 +423,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/24/0x0D/" rel="prev" title="0 x 0D">
-                0 x 0D <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -543,6 +554,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FTP"><span class="nav-number">1.</span> <span class="nav-text">FTP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Filezilla"><span class="nav-number">1.0.1.</span> <span class="nav-text">Filezilla.</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
