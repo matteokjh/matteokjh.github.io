@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[0x11]]></title>
     <url>%2F2017%2F07%2F27%2F0x11%2F</url>
-    <content type="text"><![CDATA[Summer Training Day 18. FTP FTP真相大白关于昨天失败的原因,其实一部分是由于我腾讯云安全组没把所有端口放开.今天放开了就立刻能打开ftp了.当然肯定不是所有端口都放开的，昨天按教程放开了TCP：21和linux 22不行，就不知道是哪个端口.这么做有安全隐患. 还有就是在下载oneinstack的时候，有个选项…对就是最下面那个pureFTPd…原来在这里已经装上了,昨天还傻傻的装了vsFTPd..辛苦一天配置的vsFTPd，结果无法启动.当然是因为已经启动了pureFTPd啊..早上的时候担心两个ftp会崩，结果重置了服务器..其实应该不用，只要卸掉vsFTPd再在安全组开放全端口就好了.Centos下pure-ftpd安装配置详解 Filezilla.最终还是下了个软件…很方便，传输文件用鼠标拖就行.就是记住一点：不要点quickconnect.点左上角file-&gt;site manager.添加信息connect,选unsafe那个避免TLS.不然传不了. 至于wordpress，非常强大，很多功能待发掘.]]></content>
+    <content type="text"><![CDATA[Summer Training Day 18. FTPWorldpress. FTP真相大白关于昨天失败的原因,其实一部分是由于我腾讯云安全组没把所有端口放开.今天放开了就立刻能打开ftp了.当然肯定不是所有端口都放开的，昨天按教程放开了TCP：21和linux 22不行，就不知道是哪个端口.这么做有安全隐患. 还有就是在下载oneinstack的时候，有个选项…对就是最下面那个pureFTPd…原来在这里已经装上了,昨天还傻傻的装了vsFTPd..辛苦一天配置的vsFTPd，结果无法启动.当然是因为已经启动了pureFTPd啊..早上的时候担心两个ftp会崩，结果重置了服务器..其实应该不用，只要卸掉vsFTPd再在安全组开放全端口就好了.Centos下pure-ftpd安装配置详解 Filezilla.最终还是下了个软件…很方便，传输文件用鼠标拖就行.就是记住一点：不要点quickconnect.点左上角file-&gt;site manager.添加信息connect,选unsafe那个避免TLS.不然传不了. 至于wordpress，非常强大，很多功能待发掘. 另外今天红莲讲了Vue,是个强大的前端开发框架,感觉会用了之后能大大提高效率减少心智负担..更多Vue功能等我学到用到了再开始写吧. wordpress真的玩high了 以上.]]></content>
   </entry>
   <entry>
     <title><![CDATA[0x10]]></title>
