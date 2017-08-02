@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[0x18]]></title>
+    <url>%2F2017%2F08%2F02%2F0x18%2F</url>
+    <content type="text"><![CDATA[Summer Training Day 24. 不知不觉已经快一个月了,最后一周的小项目(前端后台部分)也已经开始了三天,这几天比较充实，像是回到考核时候的最后几天爆肝的日子(目前还不至于).博客这边断更了差不多一周了，主要是觉得过去一周学到的东西不多不想发很少的东西上去像是在充数.虽然目前主要忙daily css也没什么时间去思考今天学了什么用了什么.但我觉得还是有必要写下来(其实项目的等做完再总结可能会好一些但是项目完成去旅游哪还有兴致写啊~). Daily CSS关于daily css，到时候做完可能会有介绍文档(也可能没有),总之是一个类似于谷歌新标签页小插件的样子,主体部分是每天一则CSS小知识以便用户重温一下CSS.(感觉对新手玩家特别有用).有发布|评论|收藏等功能配以每日一张壁纸和完整登陆注册以及个人资料模块作为主要难点和亮点再有在线人数查看好友资料卡等增添用户体验的功能加以凸显项目的精髓,就是团队合作.这是我们七个人(设计x2+前端x3+后台x2)的第一次合作，无论做的怎么样,大概会记住一辈子吧.然后我负责的是个人资料卡部分(包括其他人资料卡),如图.这是三天的进度..还有一半时间，包括要做完自己的部分，和后台对接,援助队友.貌似还是蛮紧的,尽力而为吧.这个东西做出来一定会很好看的. 以上.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[0x12]]></title>
+    <url>%2F2017%2F07%2F28%2F0x12%2F</url>
+    <content type="text"><![CDATA[Summer Training Day 19. Arp攻击 Arpspoof -i 网卡 -t 目标IP 网关 查ip： fping -asg 192.168.0.0/24]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[0x11]]></title>
     <url>%2F2017%2F07%2F27%2F0x11%2F</url>
-    <content type="text"><![CDATA[Summer Training Day 18. FTPWorldpress. FTP真相大白关于昨天失败的原因,其实一部分是由于我腾讯云安全组没把所有端口放开.今天放开了就立刻能打开ftp了.当然肯定不是所有端口都放开的，昨天按教程放开了TCP：21和linux 22不行，就不知道是哪个端口.这么做有安全隐患. 还有就是在下载oneinstack的时候，有个选项…对就是最下面那个pureFTPd…原来在这里已经装上了,昨天还傻傻的装了vsFTPd..辛苦一天配置的vsFTPd，结果无法启动.当然是因为已经启动了pureFTPd啊..早上的时候担心两个ftp会崩，结果重置了服务器..其实应该不用，只要卸掉vsFTPd再在安全组开放全端口就好了.Centos下pure-ftpd安装配置详解 Filezilla.最终还是下了个软件…很方便，传输文件用鼠标拖就行.就是记住一点：不要点quickconnect.点左上角file-&gt;site manager.添加信息connect,选unsafe那个避免TLS.不然传不了. 至于wordpress，非常强大，很多功能待发掘. 另外今天红莲讲了Vue,是个强大的前端开发框架,感觉会用了之后能大大提高效率减少心智负担..更多Vue功能等我学到用到了再开始写吧. wordpress真的玩high了 以上.]]></content>
+    <content type="text"><![CDATA[Summer Training Day 18. FTPWordpress. FTP真相大白关于昨天失败的原因,其实一部分是由于我腾讯云安全组没把所有端口放开.今天放开了就立刻能打开ftp了.当然肯定不是所有端口都放开的，昨天按教程放开了TCP：21和linux 22不行，就不知道是哪个端口.这么做有安全隐患. 还有就是在下载oneinstack的时候，有个选项…对就是最下面那个pureFTPd…原来在这里已经装上了,昨天还傻傻的装了vsFTPd..辛苦一天配置的vsFTPd，结果无法启动.当然是因为已经启动了pureFTPd啊..早上的时候担心两个ftp会崩，结果重置了服务器..其实应该不用，只要卸掉vsFTPd再在安全组开放全端口就好了.Centos下pure-ftpd安装配置详解 Filezilla.最终还是下了个软件…很方便，传输文件用鼠标拖就行.就是记住一点：不要点quickconnect.点左上角file-&gt;site manager.添加信息connect,选unsafe那个避免TLS.不然传不了. 至于wordpress，非常强大，很多功能待发掘. 另外今天红莲讲了Vue,是个强大的前端开发框架,感觉会用了之后能大大提高效率减少心智负担..更多Vue功能等我学到用到了再开始写吧. wordpress真的玩high了 以上.]]></content>
   </entry>
   <entry>
     <title><![CDATA[0x10]]></title>
