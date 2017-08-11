@@ -1,0 +1,983 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="(多图预警)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于暑期培训Daily CSS制作的部分介绍.">
+<meta property="og:url" content="https://matteokjh.github.io/2017/08/11/DC介绍/index.html">
+<meta property="og:site_name" content="Caster">
+<meta property="og:description" content="(多图预警)">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc01.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc17.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc02.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc03.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc04.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc05.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc06.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc07.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc08.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc09.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc10.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc18.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc11.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc12.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc13.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc14.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc15.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc16.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc19.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/dc20.png">
+<meta property="og:updated_time" content="2017-08-11T05:39:43.930Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于暑期培训Daily CSS制作的部分介绍.">
+<meta name="twitter:description" content="(多图预警)">
+<meta name="twitter:image" content="https://matteokjh.github.io/img/dc01.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://matteokjh.github.io/2017/08/11/DC介绍/"/>
+
+
+
+
+
+  <title> 关于暑期培训Daily CSS制作的部分介绍. | Caster </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Caster</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">blogging is the new sexy;</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2017/08/11/DC介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Caster.K">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Caster">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于暑期培训Daily CSS制作的部分介绍.
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T11:35:37+08:00">
+                2017-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2017暑期培训/" itemprop="url" rel="index">
+                    <span itemprop="name">2017暑期培训</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">本文总阅读量</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span><i class="fa fa">次</i>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>(多图预警)<br><a id="more"></a></p>
+<hr>
+
+<h1 id="暑期培训的最后任务"><a href="#暑期培训的最后任务" class="headerlink" title="暑期培训的最后任务."></a>暑期培训的最后任务.</h1><p><br><br>是一个小谷歌新标签页，主打每天一条CSS小知识以便用户重温，设有收藏，撰写，评论等功能，同时具备完备的登录注册模块，以及个人资料卡.<br>本人负责的模块是个人资料卡(user-info-card)，是个说小不小说大不大的模块.</p>
+<hr>
+
+<h2 id="详述"><a href="#详述" class="headerlink" title="详述."></a>详述.</h2><p>(已登陆的情况下)<br><img src="/img/dc01.png" alt=""><br>通过点击用户头像(右上角小红圆)触发个人资料卡的显示,是以增减类的方式控制左右滑动显示或者消失切换的.<br><small>drawMaster为渲染用户个人资料卡的执行渲染函数.</small><br><img src="/img/dc17.png" alt=""><br><img src="/img/dc02.png" alt=""></p>
+<hr>
+
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header."></a>Header.</h3><h4 id="头像-avatar"><a href="#头像-avatar" class="headerlink" title="头像(avatar)"></a>头像(avatar)</h4><p>鼠标悬停在个人头像上出现更换头像阴影(按钮).<br><img src="/img/dc03.png" alt=""><br>点击后屏幕中央出现更换头像的框<br><img src="/img/dc04.png" alt=""><br>点击中央上传头像图片.<br><img src="/img/dc05.png" alt=""><br>裁剪框可任意调节，右侧有预览图，点击重新上传可重新上传，确认提交按钮提交给后台(未完成)<br><img src="/img/dc06.png" alt=""></p>
+<hr>
+
+<h4 id="博客地址"><a href="#博客地址" class="headerlink" title="博客地址."></a>博客地址.</h4><p><img src="/img/dc07.png" alt=""><br>通过点击右下角设置按钮出现修改框.这是通过点击事件改变input输入框的readOnly属性实现的,点击了设置去掉此属性，修改完点击任意其他地方出发blur事件readOnly变为true并把修改后的发送到后台(未完成).<br><small>用户个人姓名即登陆名不能更改</small></p>
+<hr>
+
+<h3 id="Memo"><a href="#Memo" class="headerlink" title="Memo."></a>Memo.</h3><p>备忘录有五条，相当于五张memo纸，每张分成标签和内容两部分.<br>左边的内容部分为textarea,在用户个人的资料卡中直接点击修改，blur后发送(未完成).<br><img src="/img/dc08.png" alt=""><br>右边黄色的标签是title,单击切换不同的条目，对应左边的内容也会变.<br>双击修改title，限制字数：汉字为2，英文数字4.通过正则表达式控制，在blur事件触发的时候判断并裁剪出开头至长度限制的末端.<br>一样是失焦发送至后台(未完成).<br><img src="/img/dc09.png" alt=""><br><img src="/img/dc10.png" alt=""><br><img src="/img/dc18.png" alt=""></p>
+<hr>
+
+<h3 id="Daily-CSS"><a href="#Daily-CSS" class="headerlink" title="Daily CSS."></a>Daily CSS.</h3><p>显示用户自己发过的最近6条Daily CSS,若用户发过的所有中有其他用户的评论则会出现红色标记并置顶(未完成)<br><img src="/img/dc11.png" alt=""><br>点击其中一条跳转到详情页.<br><img src="/img/dc12.png" alt=""></p>
+<hr>
+
+<h3 id="Online-List"><a href="#Online-List" class="headerlink" title="Online List."></a>Online List.</h3><p>点击下方在线人数按钮，<br>动态出现在线人数列表，动画实现是通过slideToggle()方法加上CSS bottom控制其从下往上出现.<br>同时自己的头像缩小同好友的头像大小,放至左上方.<br><img src="/img/dc13.png" alt=""><br>点击任意好友博客地址会正确跳转，点击好友头像则会跳至相应的好友资料卡.<br><img src="/img/dc14.png" alt=""><br>因为用的是两套模板以及两个渲染函数，故更换头像阴影不会出现在他人头像出，备忘录也变成不可修改.<br><img src="/img/dc15.png" alt=""><br>下方daily css 也不会有他人评论置顶(未完成).<br>在好友资料卡中点击在线人数则会出现自己.<br><img src="/img/dc16.png" alt=""><br>点击执行drawMaster函数，重新渲染自己的个人资料卡，一切可以修改的都能正常渲染.<br><img src="/img/dc19.png" alt=""></p>
+<hr>
+
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它."></a>其它.</h2><p>未完成的部分.<br><img src="/img/dc20.png" alt=""><br>下方按钮中，清除评论通知以及消息提醒开关均未完成.<br>上文未完成大部分是剩下与后台对接.<br>在线人数头像的灰色和彩色转换也未完成.</p>
+<p><hr><br>以上.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/05/0x1A/" rel="next" title="0x1A">
+                <i class="fa fa-chevron-left"></i> 0x1A
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/11/0x∞/" rel="prev" title="0x∞">
+                0x∞ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTY2MC82MjI4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Caster.K" />
+          <p class="site-author-name" itemprop="name">Caster.K</p>
+           
+              <p class="site-description motion-element" itemprop="description">Valar Morghulis</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/matteokjh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/matteokjh" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2640986171/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#暑期培训的最后任务"><span class="nav-number">1.</span> <span class="nav-text">暑期培训的最后任务.</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#详述"><span class="nav-number">1.1.</span> <span class="nav-text">详述.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Header"><span class="nav-number">1.1.1.</span> <span class="nav-text">Header.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#头像-avatar"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">头像(avatar)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博客地址"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">博客地址.</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memo"><span class="nav-number">1.1.2.</span> <span class="nav-text">Memo.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Daily-CSS"><span class="nav-number">1.1.3.</span> <span class="nav-text">Daily CSS.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Online-List"><span class="nav-number">1.1.4.</span> <span class="nav-text">Online List.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它"><span class="nav-number">1.2.</span> <span class="nav-text">其它.</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Caster.K</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user">本站访问数：</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      <i class="fa fa">人次</i>
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye">本站总访问量</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      <i class="fa fa">次</i>
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
