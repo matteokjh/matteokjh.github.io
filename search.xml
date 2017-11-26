@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[腾讯云学生机！]]></title>
+    <url>%2F2017%2F11%2F26%2Fserver%2F</url>
+    <content type="text"><![CDATA[终于抢到了！（事实上是现在不需要抢..） 安装lnmp拿到server之后的第一件事lnmp一键安装教程这里提到了screen，目的是可以让你的下载进程挂在云服务器上，这样一来你关掉电脑也是不妨碍下载的。 12345yum install screen # 安装screen -S name # 新建screen -ls # 列举screen -x name # 进入exit # 关闭screen 大概等那么一晚上（several hours）就装好了… 安装node npm教程：node&amp;npm]]></content>
+      <categories>
+        <category>腾讯云</category>
+      </categories>
+      <tags>
+        <tag>腾讯云</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计算机网络]]></title>
     <url>%2F2017%2F11%2F14%2FCNetwork%2F</url>
-    <content type="text"><![CDATA[《计算机网络自顶向下方法》读书笔记Computer NetworkingA Top-Down Approach (Sixth Edition) 因特网构成基本概念： ISP(Internet Service Provider): 因特网服务提供商 API(Application Programming Interface): 应用程序编程接口 LAN（Local Area Network）：局域网 协议(protocol)1.一个协议定义了在两个或多个通信实体之间交换的报文格式和次序，以及报文发送和接受一条或其他事件所采取的动作2.不同的协议用于完成不同的通信任务. TCPTransmission Control Protocol, 传输控制协议 IPInternet Protocol, 网际协议 网络边缘接入网1.家庭接入DSL（Digital Subscriber Line）：数字用户线，电话公司为ISP 用户的DSL调制解调器使用电话线(双绞铜线)与位于本地中心局(CO)中的DSLAM（数字用户线接入复用器）交换数据 DSL调制解调器把数字信号转化为高频音通过电话线传给CO，在DSLAM转换回数字形式,发送到因特网。 不同的频段区分电话（0~4kHz），上下行数据（4kHz~50kHz,50kHz~1MHz）就仿佛是三条独立的线电缆接入：利用有线电视接入，由于应用到光纤和同轴电缆，被称为混合光纤同轴(Hybrid Fiber Coax, HFC) 此方法接入需要特殊的调制解调器,电缆调制解调器(cable modem) 用户共享上下行信道，需要一个分布式多路访问协议协调传输和避免碰撞FTTH：光纤到户 CO出来的每根光纤（直接光纤）实际上由许多家庭共享，直到相对接近这些家庭的位置才分一户一根。 两种光纤分布体系结构（竞争对手）：主动光纤网络（Active Optical Network, AON）和被动光纤网络（Passive Optical Network, PON） PON:每户家庭有一个光纤网络端接器（Optical Network Terminator，ONT）,由专门的光纤连接到临近的分配器（splitter）, 把这些家庭集结到一根光纤之后，这根光纤再连接到CO的端接器（Optical Line Terminator, OLT）, 该OLT提供光信号的电信号的转换，经过ISP与因特网相连。 2.企业(和家庭)接入a.以太网：用户使用双绞铜线与一台以太交换机连接，交换机与更大的因特网相连。b.WiFi: 无线用户在无线LAN环境下连接企业网，企业网再与因特网有线相连 3.广域无线接入物理媒体]]></content>
+    <content type="text"><![CDATA[《计算机网络自顶向下方法》读书笔记Computer NetworkingA Top-Down Approach (Sixth Edition) 因特网构成基本概念： ISP(Internet Service Provider): 因特网服务提供商 API(Application Programming Interface): 应用程序编程接口 LAN（Local Area Network）：局域网 协议(protocol)1.一个协议定义了在两个或多个通信实体之间交换的报文格式和次序，以及报文发送和接受一条或其他事件所采取的动作2.不同的协议用于完成不同的通信任务. TCPTransmission Control Protocol, 传输控制协议 IPInternet Protocol, 网际协议 网络边缘接入网1.家庭接入DSL（Digital Subscriber Line）：数字用户线，电话公司为ISP 用户的DSL调制解调器使用电话线(双绞铜线)与位于本地中心局(CO)中的DSLAM（数字用户线接入复用器）交换数据 DSL调制解调器把数字信号转化为高频音通过电话线传给CO，在DSLAM转换回数字形式,发送到因特网。 不同的频段区分电话（0~4kHz），上下行数据（4kHz~50kHz,50kHz~1MHz）就仿佛是三条独立的线电缆接入：利用有线电视接入，由于应用到光纤和同轴电缆，被称为混合光纤同轴(Hybrid Fiber Coax, HFC) 此方法接入需要特殊的调制解调器,电缆调制解调器(cable modem) 用户共享上下行信道，需要一个分布式多路访问协议协调传输和避免碰撞FTTH：光纤到户 CO出来的每根光纤（直接光纤）实际上由许多家庭共享，直到相对接近这些家庭的位置才分一户一根。 两种光纤分布体系结构（竞争对手）：主动光纤网络（Active Optical Network, AON）和被动光纤网络（Passive Optical Network, PON） PON:每户家庭有一个光纤网络端接器（Optical Network Terminator，ONT）,由专门的光纤连接到临近的分配器（splitter）, 把这些家庭集结到一根光纤之后，这根光纤再连接到CO的端接器（Optical Line Terminator, OLT）, 该OLT提供光信号的电信号的转换，经过ISP与因特网相连。 2.企业(和家庭)接入a.以太网：用户使用双绞铜线与一台以太交换机连接，交换机与更大的因特网相连。b.WiFi: 无线用户在无线LAN环境下连接企业网，企业网再与因特网有线相连 3.广域无线接入 3G，LTELTE：Long-Term Evolution 物理媒体导引型媒体： 1.双绞铜线2.同轴电缆3.光纤 非导引型媒体 1.陆地无线电通道2.卫星无线电通道 网络核心两种通过网络链路和交换机移动数据的基本方法： 分组交换端系统彼此交换报文（message）分组（packet）：将长报文划分为较小的数据块 交换机主要有两类： 路由器和链路层交换机]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
