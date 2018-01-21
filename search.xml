@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[routeadder]]></title>
+    <url>%2F2018%2F01%2F21%2Frouteadd%2F</url>
+    <content type="text"><![CDATA[1.vue简易的前端路由添加器2.如何发布自己的npm包 1.routeAdder基于tplserthen-fs 平时的vue项目或者demo涉及到多个路由的话就无法避免地需要手动添加组件（*.vue）以及更新路由文件（router/index.js）, 频繁地这么操作看起来很麻烦，于是就有了routeAdder. routeAdd代码使用教程在wiki.:) 核心文件router.js-tpl虽然不是我写的但我想说写出来的人是个天才:)p.s.作者是tplser模板引擎的制作人 routerGenerator.js核心思想是“读取 component 目录下的Vue文件并生成路由文件 最后写入到 target 里”调用了 router.js-tpl.作者同上. routeToFile.js↑本人写的比较简单的部分.简而言之就是在components/里生成*.vue文件. routeadd.js入口文件，获取输入的变量(路由名称)，包含正则匹配。 运行运行前需要在package.json的script对象加:1"routeadd": "node ./node_modules/routeadd/routeAdd.js" //启动入口文件 然后才能运行1npm run routeadd routeName # routeName为自定义路由名称 成功之后应该是：p.s.项目首页路由名称需要是index. 2.如何发布自己的npm包注册npmjs账号官网地址注意邮箱验证!!! 打开项目所在位置bash1npm login # 登陆--密码--邮箱 123# registrynpm config set registry http://registry.npmjs.org# 安装卡住也许是因为没有设置这个（国内被墙所以才卡住的吧） 1npm publish # 最后一步 finished.:)]]></content>
+      <categories>
+        <category>npm packages</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[腾讯云学生机！]]></title>
     <url>%2F2017%2F11%2F26%2Fserver%2F</url>
     <content type="text"><![CDATA[终于抢到了！（事实上是现在不需要抢..） 安装lnmp拿到server之后的第一件事lnmp一键安装教程这里提到了screen，目的是可以让你的下载进程挂在云服务器上，这样一来你关掉电脑也是不妨碍下载的。 12345yum install screen # 安装screen -S name # 新建screen -ls # 列举screen -x name # 进入exit # 关闭screen 大概等那么一晚上（several hours）就装好了… 安装node npm教程：node&amp;npm]]></content>
