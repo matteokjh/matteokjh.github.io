@@ -1,0 +1,1033 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="git," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一个基于ruby的Github游戏">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Githug">
+<meta property="og:url" content="https://matteokjh.github.io/2018/02/01/githug/index.html">
+<meta property="og:site_name" content="Caster">
+<meta property="og:description" content="一个基于ruby的Github游戏">
+<meta property="og:image" content="https://matteokjh.github.io/img/githug2.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/githug25.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/githug29.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/githug30.png">
+<meta property="og:image" content="https://matteokjh.github.io/img/githug56.png">
+<meta property="og:updated_time" content="2018-01-31T17:36:55.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Githug">
+<meta name="twitter:description" content="一个基于ruby的Github游戏">
+<meta name="twitter:image" content="https://matteokjh.github.io/img/githug2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://matteokjh.github.io/2018/02/01/githug/"/>
+
+
+
+
+
+  <title> Githug | Caster </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Caster</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">blogging is the new sexy;</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://matteokjh.github.io/2018/02/01/githug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Caster.K">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Caster">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Githug
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T01:33:56+08:00">
+                2018-02-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">本文总阅读量</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span><i class="fa fa">次</i>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一个基于ruby的Github游戏<br><a id="more"></a></p>
+<h1 id="Githug-Solution"><a href="#Githug-Solution" class="headerlink" title="Githug Solution"></a>Githug Solution</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>百度有教程，重点是要用cmder，要下载ruby环境</p>
+<h2 id="Level-1"><a href="#Level-1" class="headerlink" title="Level 1"></a>Level 1</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
+<h2 id="Level-2"><a href="#Level-2" class="headerlink" title="Level 2"></a>Level 2</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config -l </div><div class="line"><span class="comment"># list and find name&amp;email</span></div></pre></td></tr></table></figure>
+<p><img src="/img/githug2.png" alt=""></p>
+<h2 id="Level-3"><a href="#Level-3" class="headerlink" title="Level 3"></a>Level 3</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .</div></pre></td></tr></table></figure>
+<h2 id="Level-4"><a href="#Level-4" class="headerlink" title="Level 4"></a>Level 4</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit ...</div></pre></td></tr></table></figure>
+<h2 id="Level-5"><a href="#Level-5" class="headerlink" title="Level 5"></a>Level 5</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> ...</div></pre></td></tr></table></figure>
+<h2 id="Level-6"><a href="#Level-6" class="headerlink" title="Level 6"></a>Level 6</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> [url] [folder name]</div></pre></td></tr></table></figure>
+<h2 id="Level-7"><a href="#Level-7" class="headerlink" title="Level 7"></a>Level 7</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim .gitignore</div><div class="line"><span class="comment"># 编辑 *.swp</span></div><div class="line">:wq</div><div class="line"><span class="comment"># 完成</span></div></pre></td></tr></table></figure>
+<h2 id="Level-8"><a href="#Level-8" class="headerlink" title="Level 8"></a>Level 8</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim .gitignore</div><div class="line"><span class="comment"># 编辑 *.a , !lib.a</span></div><div class="line">git add .</div><div class="line">git commit ...</div></pre></td></tr></table></figure>
+<h2 id="Level-9"><a href="#Level-9" class="headerlink" title="Level 9"></a>Level 9</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
+<h2 id="Level-10"><a href="#Level-10" class="headerlink" title="Level 10"></a>Level 10</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status <span class="comment"># 数commit的文件数其实就是add（绿色）文件数目</span></div></pre></td></tr></table></figure>
+<h2 id="Level-11"><a href="#Level-11" class="headerlink" title="Level 11"></a>Level 11</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git status</div><div class="line"><span class="comment"># 发现有一个已经删除但是存在工作区的文件</span></div><div class="line">git rm [file name]</div></pre></td></tr></table></figure>
+<h2 id="Level-12"><a href="#Level-12" class="headerlink" title="Level 12"></a>Level 12</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git status</div><div class="line"><span class="comment"># 发现一个错误add上去的文件</span></div><div class="line">git rm [file name] --cache</div><div class="line"><span class="comment"># 在暂存区删除文件但本地的文件还在</span></div></pre></td></tr></table></figure>
+<h2 id="Level-13"><a href="#Level-13" class="headerlink" title="Level 13"></a>Level 13</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash <span class="comment"># 储藏</span></div></pre></td></tr></table></figure>
+<h2 id="Level-14"><a href="#Level-14" class="headerlink" title="Level 14"></a>Level 14</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git mv oldname newname</div></pre></td></tr></table></figure>
+<h2 id="Level-15"><a href="#Level-15" class="headerlink" title="Level 15"></a>Level 15</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git mv filename newFolder <span class="comment"># 一条命令等于三条</span></div><div class="line"><span class="comment"># mv filename newFolder</span></div><div class="line"><span class="comment"># git rm filename</span></div><div class="line"><span class="comment"># git add filename</span></div></pre></td></tr></table></figure>
+<h2 id="Level-16"><a href="#Level-16" class="headerlink" title="Level 16"></a>Level 16</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span> <span class="comment"># 输入hash</span></div></pre></td></tr></table></figure>
+<h2 id="Level-17"><a href="#Level-17" class="headerlink" title="Level 17"></a>Level 17</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git tag new_tag [commit <span class="built_in">hash</span>] <span class="comment"># commit的hash串</span></div><div class="line"><span class="comment"># 一开始没写commit hash创建了一个空标签，不知道怎么添加commit hash进去于是只好删掉再输入</span></div></pre></td></tr></table></figure>
+<h2 id="Level-18"><a href="#Level-18" class="headerlink" title="Level 18"></a>Level 18</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git status <span class="comment"># 干净的branch</span></div><div class="line">git tag <span class="comment"># 发现有一个tag_to_be_pushed标签</span></div><div class="line">git show tag_to_be_pushed <span class="comment"># 有一个 First commit 的东西</span></div><div class="line">git push origin tag_to_be_pushed <span class="comment"># 尝试这样看行不行，结果成功了</span></div></pre></td></tr></table></figure>
+<h2 id="Level-19"><a href="#Level-19" class="headerlink" title="Level 19"></a>Level 19</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit --amend <span class="comment"># :q退出就好</span></div><div class="line"><span class="comment"># --amend 常用来修改branch顶端的commit（栈顶也就是最近一次commit）</span></div><div class="line"><span class="comment"># 也叫 追加提交 ，优点是不会产生新的commit id</span></div></pre></td></tr></table></figure>
+<h2 id="Level-20"><a href="#Level-20" class="headerlink" title="Level 20"></a>Level 20</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 修改commit时间至未来（修改git log显示时间）</span></div><div class="line">git commit -m <span class="string">"nothing"</span></div><div class="line">git commit --amend --date=<span class="string">"Wed, 24 Jan 2018 21:59:00 +0800"</span> </div><div class="line"><span class="comment"># 这是date格式，不知道有没有更简单的写法</span></div></pre></td></tr></table></figure>
+<h2 id="Level-21"><a href="#Level-21" class="headerlink" title="Level 21"></a>Level 21</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git reset [commit id] <span class="comment"># 两个add退回一个不会，这里是都退回然后add一个</span></div><div class="line"><span class="comment"># 后来知道可以直接 git reset filename</span></div></pre></td></tr></table></figure>
+<h2 id="Level-22"><a href="#Level-22" class="headerlink" title="Level 22"></a>Level 22</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 引入 --soft 参数</span></div><div class="line">git reset [commit id] --soft</div><div class="line"><span class="comment"># --soft 表示只把HEAD指针退回[commit id]的版本，但是index和working copy不变</span></div><div class="line"><span class="comment"># --hard 就是三个都变，因为working copy变化会影响work tree ，也就是可能丢失代码，所以不推荐</span></div><div class="line"><span class="comment"># --mixed（默认） 就是index和HEAD变化，working copy不变</span></div><div class="line"><span class="comment"># p.s.后来知道不用写【commit id】,可以直接写 git reset HEAD~1（HEAD^） 表示退回上一个版本。</span></div></pre></td></tr></table></figure>
+<blockquote><br>这里隆重介绍HEAD , index, 和 working copy<br><ul><br>    <li>HEAD：就是指当前commit的位置（头指针）</li><br>    <li>index：指包含下一个commit的文件集（也就是即将commit的位置）</li><br>    <li>working copy：当前工作区</li><br></ul><br>所以说为什么 –hard可能导致代码丢失（因为影响了working copy）<br></blockquote>
+
+<h2 id="Level-23"><a href="#Level-23" class="headerlink" title="Level 23"></a>Level 23</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout filename</div><div class="line"><span class="comment"># git chekout branchName filename</span></div><div class="line"><span class="comment"># git checkout master 本质是把master分支上的HEAD指针取出来，达到所谓的“切换分支”</span></div><div class="line"><span class="comment"># git checkout filename 获得当前分支该文件的修改前版本</span></div></pre></td></tr></table></figure>
+<h2 id="Level-24"><a href="#Level-24" class="headerlink" title="Level 24"></a>Level 24</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote <span class="comment"># 列出远程仓库名</span></div><div class="line">git remote -v <span class="comment"># 列出详细url</span></div></pre></td></tr></table></figure>
+<p>我们熟悉的 git remote add url<br>连接远程仓库w</p>
+<h2 id="Level-25"><a href="#Level-25" class="headerlink" title="Level 25"></a>Level 25</h2><p>“The remote repositories have a url associated to them.  Please enter the url of remote_location.”<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote -v</div></pre></td></tr></table></figure></p>
+<p>列出了这几个东西：<br><img src="/img/githug25.png" alt=""><br>我懵了，两个url哪个才是呢？<br>逐一尝试发现第二个才是正确答案，不解。</p>
+<h2 id="Level-26"><a href="#Level-26" class="headerlink" title="Level 26"></a>Level 26</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div></pre></td></tr></table></figure>
+<h2 id="Level-27"><a href="#Level-27" class="headerlink" title="Level 27"></a>Level 27</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin url</div></pre></td></tr></table></figure>
+<h2 id="Level-28"><a href="#Level-28" class="headerlink" title="Level 28"></a>Level 28</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git rebase origin/master </div><div class="line"><span class="comment"># 与merge类似，同样是把master分支合并到当前分支</span></div><div class="line"><span class="comment"># git rebase 又称 衍合 ， 变基操作，本质上改变了commit的历史</span></div><div class="line"><span class="comment"># git pull 包含了两步操作：</span></div><div class="line"><span class="comment"># git fetch 和 git merge</span></div><div class="line"><span class="comment"># git fetch 就是 “取下目标的更新”，放在“.git/FETCH_HEAD”这里</span></div><div class="line"><span class="comment"># git 有tracking（跟踪）概念，把【来源】和【目标】绑在一起，以避免不必要的参数</span></div></pre></td></tr></table></figure>
+<p>关于merge 和 rebase， 这里讲的蛮清楚了<br><a href="http://blog.csdn.net/wh_19910525/article/details/7554489" target="_blank" rel="external">merge&amp;rebase</a></p>
+<p><blockquote><br>简而言之，merge就是当你跟别人conflict的时候会生成一个新的“合并提交”,<br>而rebase不会，它会首先取消你的提交，把你的提交信息保存在.git/rebase中作为补丁（patch），<br>使你的个人分支（当前所在分支）变成新的origin分支，然后一个个添加补丁，这样你的commit树就会像一根线一样看起来整洁（因为补丁都依次排列在原分支后）<br></blockquote><br>p.s.使用rebase注意一条铁律：<br><strong>一旦分支中的提交对象发布到公共仓库，就千万不要对该分支进行合并操作！</strong></p>
+<li>因为rebase会经常使你或者其他人的分支变成新的origin，如果不小心是在master分支上rebase的话就会临时产生两个master，所以不允许在master上rebase。个人分支上rebase之后也需要在master分支merge过来，还不如git pull 方便。</li><br><li>还有就是如果rebase一次出现conflict，也需要解决多次冲突，而merge一次解决。</li><br><li>再者，就是许多项目严格按照版本迭代，如果项目有问题需要回滚一个版本，如果用rebase就gg了。rebase会打乱时间戳（自己的commit提到最上面无论时间是否是最近），merge不会打乱时间戳。</li>
+
+<h2 id="Level-29"><a href="#Level-29" class="headerlink" title="Level 29"></a>Level 29</h2><p>这题试了无数次qwq<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff</div></pre></td></tr></table></figure></p>
+<p>给我这么一段东西：<br><img src="/img/githug29.png" alt=""><br>百度之后知道是<br>“-” 开头表示源文件<br>“+”开头表示目标文件<br>“@@”那一行表示<strong>差异小结</strong>的开始（注意！这一行下面一行才是差异的第一行！）<br>就是图中的    “erb  : success”为差异小结第一行，从这里开始数直到“  -  ”，“  +  ”符号出现，这里是第四行，然后加上差异出现位置23行，然后就理所当然得到27 ，（咦不对喔？立马用左右互搏之术得到正确答案26哈哈哈~）其实是我懵逼了，erb是第一行也是23行，所以其实就是26行（第四行就是增加3行）。</p>
+<h2 id="Level-30"><a href="#Level-30" class="headerlink" title="Level 30"></a>Level 30</h2><p>这关我并不知道怎么做，当成ctf了哈哈哈<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span></div><div class="line"><span class="comment"># 发现一堆二五仔提交，都是对那个文件的修改，每个人改一点，题目问password是谁改的。</span></div></pre></td></tr></table></figure></p>
+<p>commit信息里Bruce Banner说是他改的，但我输入不是，但不可能是他之后，只能是之前，往前推一个Spider man，答案正确。（完全就是蒙的）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git blame config.rb</div><div class="line"><span class="comment"># 后来知道可以这样来查看所有修改过的代码是谁修改的！这个命令太厉害了命名也恰到好处哈哈哈</span></div></pre></td></tr></table></figure></p>
+<p><img src="/img/githug30.png" alt=""><br>想找哪一部分是谁写的简直不费吹灰之力~</p>
+<h2 id="Level-31"><a href="#Level-31" class="headerlink" title="Level 31"></a>Level 31</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch test_code</div></pre></td></tr></table></figure>
+<h2 id="Level-32"><a href="#Level-32" class="headerlink" title="Level 32"></a>Level 32</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch my_branch</div><div class="line">git checkout my_branch</div></pre></td></tr></table></figure>
+<h2 id="Level-33"><a href="#Level-33" class="headerlink" title="Level 33"></a>Level 33</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git tag <span class="comment"># list</span></div><div class="line">git checkout tag_name</div></pre></td></tr></table></figure>
+<h2 id="Level-34"><a href="#Level-34" class="headerlink" title="Level 34"></a>Level 34</h2><p>这题想不到解决办法，只好删掉branch再切tag<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch -D v1.2 <span class="comment"># -D强制删除</span></div><div class="line">git checkout v1.2</div></pre></td></tr></table></figure></p>
+<p>网上正确做法是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout tags/v1.2</div></pre></td></tr></table></figure></p>
+<h2 id="Level-35"><a href="#Level-35" class="headerlink" title="Level 35"></a>Level 35</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout -b test_branch [commit_id]</div><div class="line"><span class="comment"># -b : 创建新分支并切换分支</span></div></pre></td></tr></table></figure>
+<h2 id="Level-36"><a href="#Level-36" class="headerlink" title="Level 36"></a>Level 36</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -d ...</div></pre></td></tr></table></figure>
+<h2 id="Level-37"><a href="#Level-37" class="headerlink" title="Level 37"></a>Level 37</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout test_branch</div><div class="line">git push origin test_branch</div></pre></td></tr></table></figure>
+<h2 id="Level-38"><a href="#Level-38" class="headerlink" title="Level 38"></a>Level 38</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge feature</div></pre></td></tr></table></figure>
+<h2 id="Level-39"><a href="#Level-39" class="headerlink" title="Level 39"></a>Level 39</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch </div><div class="line"><span class="comment"># fetch 上面有提到</span></div></pre></td></tr></table></figure>
+<h2 id="Level-40"><a href="#Level-40" class="headerlink" title="Level 40"></a>Level 40</h2><p>又是rebase，跟28关的提交略有不同，28关的rebase只有一个参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rebase master feature </div><div class="line"><span class="comment"># 将feature分支的修改应用到 master上</span></div><div class="line"><span class="comment"># 就是给master打上feature这个补丁</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-41"><a href="#Level-41" class="headerlink" title="Level 41"></a>Level 41</h2><p>这题用到了rebase 的 –onto 属性.<br><a href="https://www.zhihu.com/question/60279937" target="_blank" rel="external">知乎：git rebase 的 –onto选项的用法疑问？</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rebase --onto master wrong <span class="built_in">read</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 用法：</span></div><div class="line">git rebase --onto A B C</div><div class="line"><span class="comment"># B与C必须有共同的祖先commit</span></div></pre></td></tr></table></figure>
+<p>1.checkout到C<br>2.把B到C之间的commit写成一个文件存着<br>3.强制git reset –hard 到A（C的HEAD重置为A）<br>4.把 2 中的commit一个个添加到A，操作结束之后当前分支为C.</p>
+<h2 id="Level-42"><a href="#Level-42" class="headerlink" title="Level 42"></a>Level 42</h2><p>repack<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git repack -d </div><div class="line"><span class="comment"># repack教程说的.</span></div><div class="line"><span class="comment"># “After packing, if the newly created packs make some existing packs redundant, remove the redundant packs. Also run git prune-packed to remove redundant loose object files.”</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-43"><a href="#Level-43" class="headerlink" title="Level 43"></a>Level 43</h2><p> cherry-pick<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git cherry-pick [commit-id]</div><div class="line"><span class="comment"># 把特定id的commit在master提交（新commit 的id不同但名字一样）</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-44"><a href="#Level-44" class="headerlink" title="Level 44"></a>Level 44</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git grep TODO </div><div class="line"><span class="comment"># 检索代码功能。列出了四个</span></div></pre></td></tr></table></figure>
+<h2 id="Level-45"><a href="#Level-45" class="headerlink" title="Level 45"></a>Level 45</h2><p>这题好玩<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span></div><div class="line"><span class="comment"># First coommit 拼错了</span></div><div class="line">git rebase -i HEAD~~~</div><div class="line"><span class="comment"># 编辑这个文件把first的那行的pick改成edit</span></div><div class="line">git commit --amend</div><div class="line"><span class="comment"># 修改拼写错误</span></div><div class="line">git rebase --<span class="built_in">continue</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-46"><a href="#Level-46" class="headerlink" title="Level 46"></a>Level 46</h2><p>git rebase –abort 撤回！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git rebase -i HEAD^^^</div><div class="line"><span class="comment"># 将里面的三个pick改成s（squash），意思是将该commit合并到前一个commit。readme本身不用改</span></div><div class="line">git commit --amend</div><div class="line">git rebase --<span class="built_in">continue</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-47"><a href="#Level-47" class="headerlink" title="Level 47"></a>Level 47</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge --squash [branch_name]</div></pre></td></tr></table></figure>
+<p>将特定分支所有commit合并</p>
+<h2 id="Level-48"><a href="#Level-48" class="headerlink" title="Level 48"></a>Level 48</h2><p>reorder<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rebase -i HEAD~~~</div></pre></td></tr></table></figure></p>
+<p>直接爆力修改顺序</p>
+<h2 id="Level-49"><a href="#Level-49" class="headerlink" title="Level 49"></a>Level 49</h2><p>bisect<br>厉害<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git bisect start master [first commit_id]</div><div class="line"><span class="comment"># master就是HEAD所在commit也就是最新commit，bad commit。而first commit 一定是good commit。所以</span></div><div class="line">git bisect run ruby prog.rb 5</div><div class="line"><span class="comment"># 提示说15是正确结果，于是找到第一个不是15的commit就是正确答案。</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-50"><a href="#Level-50" class="headerlink" title="Level 50"></a>Level 50</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add -e filename</div><div class="line"><span class="comment"># 删掉第二行就好</span></div></pre></td></tr></table></figure>
+<h2 id="Level-51"><a href="#Level-51" class="headerlink" title="Level 51"></a>Level 51</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 这题看git log时间一个个找的...</span></div></pre></td></tr></table></figure>
+<h2 id="Level-52"><a href="#Level-52" class="headerlink" title="Level 52"></a>Level 52</h2><p>revert<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git revert [bad_commit_id]</div><div class="line"><span class="comment"># revert的意思是不改变历史，“删除”特定commit，方法是新增commmit做特定commit的相反操作。</span></div></pre></td></tr></table></figure></p>
+<h2 id="Level-53"><a href="#Level-53" class="headerlink" title="Level 53"></a>Level 53</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git reflog</div><div class="line"><span class="comment"># 列出所有历史</span></div><div class="line">git checkout [restore_id]</div><div class="line"><span class="comment"># 找到该拿回来的commit_id</span></div></pre></td></tr></table></figure>
+<h2 id="Level-54"><a href="#Level-54" class="headerlink" title="Level 54"></a>Level 54</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git diff</div><div class="line"><span class="comment"># 全保留就对了</span></div></pre></td></tr></table></figure>
+<h2 id="Level-55"><a href="#Level-55" class="headerlink" title="Level 55"></a>Level 55</h2><p>submodule<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add [url] [dir]</div></pre></td></tr></table></figure></p>
+<h2 id="Level-56"><a href="#Level-56" class="headerlink" title="Level 56"></a>Level 56</h2><p>contribute<br>可以为官方仓库做贡献，比如出题什么的..<br>到这里已经结束了。<br><img src="/img/githug56.png" alt=""></p>
+<p><hr><br>我学到最重要的东西不只是github的许多之前未接触到的知识，而是，希望自己在将来的学习中能充当自己的debuger，常常告诉自己，一句游戏中出现过无数次的话：</p>
+<p><blockquote>Sorry, this solution is not quite right!</blockquote><br> finished.</p>
+<p>-完成日期： 2018.02.01-</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/21/routeadd/" rel="next" title="routeadder">
+                <i class="fa fa-chevron-left"></i> routeadder
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTY2MC82MjI4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Caster.K" />
+          <p class="site-author-name" itemprop="name">Caster.K</p>
+           
+              <p class="site-description motion-element" itemprop="description">Valar Morghulis</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/matteokjh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/matteokjh" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2640986171/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Githug-Solution"><span class="nav-number">1.</span> <span class="nav-text">Githug Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-1"><span class="nav-number">1.2.</span> <span class="nav-text">Level 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-2"><span class="nav-number">1.3.</span> <span class="nav-text">Level 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-3"><span class="nav-number">1.4.</span> <span class="nav-text">Level 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-4"><span class="nav-number">1.5.</span> <span class="nav-text">Level 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-5"><span class="nav-number">1.6.</span> <span class="nav-text">Level 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-6"><span class="nav-number">1.7.</span> <span class="nav-text">Level 6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-7"><span class="nav-number">1.8.</span> <span class="nav-text">Level 7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-8"><span class="nav-number">1.9.</span> <span class="nav-text">Level 8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-9"><span class="nav-number">1.10.</span> <span class="nav-text">Level 9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-10"><span class="nav-number">1.11.</span> <span class="nav-text">Level 10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-11"><span class="nav-number">1.12.</span> <span class="nav-text">Level 11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-12"><span class="nav-number">1.13.</span> <span class="nav-text">Level 12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-13"><span class="nav-number">1.14.</span> <span class="nav-text">Level 13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-14"><span class="nav-number">1.15.</span> <span class="nav-text">Level 14</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-15"><span class="nav-number">1.16.</span> <span class="nav-text">Level 15</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-16"><span class="nav-number">1.17.</span> <span class="nav-text">Level 16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-17"><span class="nav-number">1.18.</span> <span class="nav-text">Level 17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-18"><span class="nav-number">1.19.</span> <span class="nav-text">Level 18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-19"><span class="nav-number">1.20.</span> <span class="nav-text">Level 19</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-20"><span class="nav-number">1.21.</span> <span class="nav-text">Level 20</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-21"><span class="nav-number">1.22.</span> <span class="nav-text">Level 21</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-22"><span class="nav-number">1.23.</span> <span class="nav-text">Level 22</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-23"><span class="nav-number">1.24.</span> <span class="nav-text">Level 23</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-24"><span class="nav-number">1.25.</span> <span class="nav-text">Level 24</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-25"><span class="nav-number">1.26.</span> <span class="nav-text">Level 25</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-26"><span class="nav-number">1.27.</span> <span class="nav-text">Level 26</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-27"><span class="nav-number">1.28.</span> <span class="nav-text">Level 27</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-28"><span class="nav-number">1.29.</span> <span class="nav-text">Level 28</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-29"><span class="nav-number">1.30.</span> <span class="nav-text">Level 29</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-30"><span class="nav-number">1.31.</span> <span class="nav-text">Level 30</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-31"><span class="nav-number">1.32.</span> <span class="nav-text">Level 31</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-32"><span class="nav-number">1.33.</span> <span class="nav-text">Level 32</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-33"><span class="nav-number">1.34.</span> <span class="nav-text">Level 33</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-34"><span class="nav-number">1.35.</span> <span class="nav-text">Level 34</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-35"><span class="nav-number">1.36.</span> <span class="nav-text">Level 35</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-36"><span class="nav-number">1.37.</span> <span class="nav-text">Level 36</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-37"><span class="nav-number">1.38.</span> <span class="nav-text">Level 37</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-38"><span class="nav-number">1.39.</span> <span class="nav-text">Level 38</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-39"><span class="nav-number">1.40.</span> <span class="nav-text">Level 39</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-40"><span class="nav-number">1.41.</span> <span class="nav-text">Level 40</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-41"><span class="nav-number">1.42.</span> <span class="nav-text">Level 41</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-42"><span class="nav-number">1.43.</span> <span class="nav-text">Level 42</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-43"><span class="nav-number">1.44.</span> <span class="nav-text">Level 43</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-44"><span class="nav-number">1.45.</span> <span class="nav-text">Level 44</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-45"><span class="nav-number">1.46.</span> <span class="nav-text">Level 45</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-46"><span class="nav-number">1.47.</span> <span class="nav-text">Level 46</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-47"><span class="nav-number">1.48.</span> <span class="nav-text">Level 47</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-48"><span class="nav-number">1.49.</span> <span class="nav-text">Level 48</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-49"><span class="nav-number">1.50.</span> <span class="nav-text">Level 49</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-50"><span class="nav-number">1.51.</span> <span class="nav-text">Level 50</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-51"><span class="nav-number">1.52.</span> <span class="nav-text">Level 51</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-52"><span class="nav-number">1.53.</span> <span class="nav-text">Level 52</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-53"><span class="nav-number">1.54.</span> <span class="nav-text">Level 53</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-54"><span class="nav-number">1.55.</span> <span class="nav-text">Level 54</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-55"><span class="nav-number">1.56.</span> <span class="nav-text">Level 55</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level-56"><span class="nav-number">1.57.</span> <span class="nav-text">Level 56</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Caster.K</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user">本站访问数：</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      <i class="fa fa">人次</i>
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye">本站总访问量</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      <i class="fa fa">次</i>
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
