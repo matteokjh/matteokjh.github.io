@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2019%2F09%2F08%2Ftest%2F</url>
+    <content type="text"><![CDATA[just test]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[new blog]]></title>
     <url>%2F2018%2F06%2F07%2Fblog%2F</url>
     <content type="text"><![CDATA[这个博客地址以后可能不会用了，新博客地址：https://sulpures.com/]]></content>
